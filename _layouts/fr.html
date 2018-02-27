@@ -1,0 +1,39 @@
+---
+layout: default
+title: Atelier - Peinture à l'huile
+---
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<title>Atelier - Peinture à l'huile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/normalize.css" media="screen">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/github-light.css" media="screen">
+<link rel='icon' href='{{ site.baseurl }}/images/impasto.ico' type=‘image/x-ico’ /> 
+</head>
+<body>
+	<section class="page-header">
+		<h1 class="project-name">Atelier - Peinture à l'huile</h1>
+		<h2 class="project-tagline">Première mondiale en simulation 3D de peinture à l'huile</h2>
+		<a href="https://soyatec.github.io/oilpainting/" target="_blank" class="btn">Anglais</a>
+		<a href="https://soyatec.github.io/oilpainting/cn" class="btn">简体中文</a>
+	
+	</section>
+	<section class="main-content">
+		<h1>{{page.title}}</h2>
+		{{content}}
+		
+		<p><a href = "https://soyatec.github.io/oilpainting">Back to home</a></p>
+		<hr>
+		{% include disqus.html %}
+		<footer class="site-footer">
+			<div align="center">
+			<span class="site-footer-credits">Atelier - Peinture à l'huile @<a href="http://www.soyatec.com">Soyatec</a></span>
+			</div>
+		</footer>
+	</section>
+</body>
+</html>
