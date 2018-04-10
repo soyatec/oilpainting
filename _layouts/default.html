@@ -24,10 +24,18 @@
 		<hr>
 		<ul>
 			{% if page.previous != nil%}
-			<li>PREVIOUS: <a href="{{page.previous.url}}">{{page.previous.title}}</a></li>
+			<li>Previous
+				<p>
+					<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+				</p>
+			</li> 
 			{% endif %}
 			{% if page.next != nil %}
-			<li>NEXT: <a href="{{page.next.url}}">{{page.next.title}}</a></li>
+			<li>Next
+				<p>
+					<a href="{{page.next.url}}">{{page.next.title}}</a>
+				</p>
+			</li> 
 			{% endif%}
 		</ul>
 		<hr>
