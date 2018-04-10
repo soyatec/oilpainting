@@ -1,0 +1,723 @@
+--- 
+layout: cn 
+title: Painting Tools
+category: User's Guide 
+next: {url: tool_controller.html, title: Tool Controller}
+previous: {url: toolbar.html, title: Tool Bar }
+---
+<html>
+<body>
+	<p>A painting tool is used to produce the artwork directly. There
+		are several kinds of painting tools, brushes, knifes, tubes and Fluffy
+		Mop and so on.</p>
+	<ul>
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#colortubes">Color Tubes</a></li>
+		<li><a href="#brushes">Brushes</a></li>
+		<ul>
+			<li><a href="#flat">Flat</a></li>
+			<li><a href="#filbert">Filbert</a></li>
+			<li><a href="#fan">Fan</a></li>
+		</ul>
+		<li><a href="#knifes">Knifes</a>
+			<ul>
+				<li><a href="#knifepainting">Knife Painting</a></li>
+				<li><a href="#sgraffitoeffect">Sgraffito Effect</a></li>
+				<li><a href="#pickupgesture">Pick Up Gesture</a></li>
+				<li><a href="#chamoisleathers">Chamois Leathers</a></li>
+			</ul></li>
+		<li><a href="#utilitytools">Utility Tools</a></li>
+		<ul>
+			<li><a href="#colorfilling">Color Filling</a></li>
+			<li><a href="#colorpatternpicker">Color Pattern Picker</a></li>
+			<li><a href="#fluffymop">Fluffy Mop</a></li>
+		</ul>
+	</ul>
+	<h2>
+		<a name="overview">Overview</a>
+	</h2>
+	<p>During the painting process, a painting tool may have different
+		states. For example, Knife and Brush has three states: Clean, Dirty,
+		Pattern.</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>State</th>
+				<th>Description</th>
+				<th colspan="1">Transition</th>
+			</tr>
+			<tr>
+				<td>Clean</td>
+				<td>Tool has a non color</td>
+				<td colspan="1">
+					<p>A Clean tool becomes Dirty when we use it to paint to
+						interact with the colors on surface.</p>
+					<p>If the option Auto Reset is enabled, this action cleans the
+						current saved pattern. In this case, the tool has the same effect
+						as the option Auto Clean.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Dirty</td>
+				<td>Tool has kept some colors produced during the painting
+					process.</td>
+				<td colspan="1">
+					<p>A Dirty tool can be back to Clean by the button Clean. If
+						the option Auto Reset is disabled, a Dirty tool keeps dirty
+						between strokes.</p>
+					<p>If the option Auto Reset is enabled, it comes back to
+						Pattern state after each stroke. if a Pattern state has no color,
+						it is in Clean state.</p>
+					<p>The temporary Dirty state can be saved as a Pattern to be
+						reused easily afterhands.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Pattern</td>
+				<td>Tool has some colors and</td>
+				<td colspan="1">
+					<p>
+						The tool like Brush and Knife may become Dirty when it <span>interacts
+							with the colors on surface. <span>The state is known as
+								color pattern. This state can be saved and then reused
+								repeatedly by the option Auto Reset. </span>
+						</span>
+					</p>
+					<p>
+						<span><span>This state goes back to Clean by the
+								button, Clean.</span></span>
+					</p>
+					<p>&nbsp;</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>The Tube Tool is simplest painting tool since it has no
+		bi-directional interaction with canvas. The purpose of Tube is enabled
+		to put some color liquid on canvas. Therefore, the options Auto Reset
+		and Auto Clean don't make sense for Tube.</p>
+	<p>
+		The option Auto Reset is a property of Painting Tool.<span> <span>The
+				change on these options is applied to the current Painting Tool. And
+				t</span></span>he both options cannot be used together. Only one of them can be
+		enabled.
+	</p>
+	<p>When the option Auto Reset is enabled, the pattern is saved on
+		the following cases:</p>
+	<ol>
+		<li>Pickup action over <span>the Color bowl</span></li>
+		<li><span>Using Pickup tool</span></li>
+		<li>Clean action</li>
+	</ol>
+	<h2>
+		<a name="colortubes">Color Tubes</a>
+	</h2>
+	<p>Color Tube contains color liquid. It is used to add some color
+		liquid on the support directly. The pressure of Apple Pencil controls
+		the quantity of color: more pressure, bigger diameter of color liquid
+		on canvas. The direction of Altitude and Azimuth has no effect.</p>
+	<h2>
+		<a name="brushes">Brushes</a>
+	</h2>
+	<p>
+		<span style="color: rgb(0, 0, 0);">Brushes are the most
+			important part of your equipment. Brushes come in different shapes, t<span
+			style="color: rgb(0, 0, 0);">he most common shapes brushes
+				come in are: Flats, Filberts, Fans and Mops</span><span
+			style="color: rgb(0, 0, 0);">. The detail of each is described
+				in the following paragraphs. </span>
+		</span>
+	</p>
+	<p>All these Brushes have a common behaviour and control. Comparing
+		to Knifes, Brushes leaves always Bristle traces in strokes, and
+		bristles of Brush spread slightly on the pressure you applied to
+		painting support. Same as Knife, the pressure plays an important role
+		on the thickness of wet color layer. The thickness is
+		inverse-proportional to the pressure: more pressure, thinner of the
+		layer.</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>Apple Pencil</th>
+				<th>Description of Brushes</th>
+			</tr>
+			<tr>
+				<td>Pressure</td>
+				<td>
+					<p>Control the thickness of color. More pressure, thinner of
+						color layer on painting support. Pressure on the painting support
+						plays slightly a role on the widespread of Brush's bristles.</p>
+					<p>
+						Here are the screen shots of Brushes<span>&nbsp;</span>that shows
+						the influence of pressure on the texture of Stroke.
+					</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>Filbert</td>
+								<td><img height="150" src="../../images/FilbertPressure.jpg" /></td>
+							</tr>
+							<tr>
+								<td>Falt</td>
+								<td><img height="150" src="../../images/FlatPressure.jpg" /></td>
+							</tr>
+							<tr>
+								<td>Fan</td>
+								<td><img height="150" src="../../images/FanPressure.jpg" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>Altitude</td>
+				<td>Control Brush's vertical direction.</td>
+			</tr>
+			<tr>
+				<td>Azimuth</td>
+				<td>Control the Brush's orientation in the plan of painting
+					support.</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>The direction of brush head can be controlled by the Joystick to
+		rotate on the axis of Apple Pencil.</p>
+	<h3>
+		<a name="flat">Flat</a>
+	</h3>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(0, 0, 0);"><span
+				style="color: rgb(0, 0, 0);">A Flat brush has hairs arranged
+					in a rectangular shape that is longer than it is wide. From the
+					side it is narrow. The Flat is the most versatile of brushes. You
+					can make a broad stroke, a narrow stroke and, with a little twist,
+					a triangular stroke.</span></span></span>
+	</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>Description</th>
+				<th>Screen shot</th>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						<span>Azimuth <span style="color: rgb(0, 0, 0);">~</span>
+							0&deg;
+						</span>
+					</p>
+					<p>
+						<span>Altitude <span style="color: rgb(0, 0, 0);">~</span>
+							30
+						</span>
+					</p>
+				</td>
+				<td><img width="550" src="../../images/Flat_01.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+					</p>
+					<p>
+						<span>Altitude <span style="color: rgb(0, 0, 0);">~</span>
+							30
+						</span>
+					</p>
+				</td>
+				<td><img width="478" src="../../images/Flat_02.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						<span>Azimuth <span style="color: rgb(0, 0, 0);">~</span>
+							70&deg;
+						</span>
+					</p>
+					<p>
+						<span><span>Altitude <span
+								style="color: rgb(0, 0, 0);">~</span> 30
+						</span></span>
+					</p>
+				</td>
+				<td><img width="290" src="../../images/Flat_04.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 70&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td><img width="300" src="../../images/Flat_05.jpg" /></td>
+			</tr>
+			<tr>
+				<td>Dot strokes with different angles and pressures</td>
+				<td><img width="300" src="../../images/Flat_06.jpg" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(0, 0, 0);"><span
+				style="color: rgb(0, 0, 0);"><br /></span></span></span>
+	</p>
+	<h3>
+		<a name="filbert">Filbert</a>
+	</h3>
+	<p>
+		<span style="color: rgb(0, 0, 0);">A Filbert looks like a Flat
+			with the corners rounded. The stroke is oval shaped or half circular.
+			They are used when you want a softer edge or for smaller blends than
+			you get with a Flat. <span style="color: rgb(25, 25, 25);">Because
+				of its distinctive, semi-circular shape, a fan brush can easily
+				create a series of marks in your painting that are repetitive and
+				predictable. </span>
+		</span>
+	</p>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(25, 25, 25);"><br /></span></span>
+	</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>Description</th>
+				<th>Screen shot</th>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td><img width="596" src="../../images/Filbert_01.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td><img width="600" src="../../images/Filbert_02.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 70&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 60
+					</p>
+				</td>
+				<td><img width="600" src="../../images/Filbert_03.jpg" /></td>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td colspan="1"><img width="362" src="../../images/Filbert_04.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td><img width="353" src="../../images/Filbert_05.jpg" /></td>
+			</tr>
+			<tr>
+				<td><span>Dot strokes</span> with different angles and
+					pressures</td>
+				<td><img width="353" src="../../../images/Filbert_06.jpg" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(25, 25, 25);"><br /></span></span>
+	</p>
+	<h3>
+		<a name="fan">Fan</a>
+	</h3>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(25, 25, 25);">Fan brush is a thin&nbsp;flat
+				brush </span><span style="color: rgb(25, 25, 25);">with the spread
+				out in a semi-circle, like a hand-held paper fan. These brushes a<span
+				style="color: rgb(25, 25, 25);">re also extremely useful for
+					mark-making. </span>
+		</span></span>
+	</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>Description</th>
+				<th>Screen shot</th>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td><img width="496" src="../../images/Fan_01.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -60&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td><img width="587" src="../../images/Fan_02.jpg" /></td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td><img width="358" src="../../images/Fan_08.jpg" /></td>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<p>
+						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+					</p>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+					</p>
+				</td>
+				<td colspan="1"><img width="371" src="../../images/Fan_04.jpg" /></td>
+			</tr>
+			<tr>
+				<td><span>Dot strokes</span> with different angles and
+					pressures</td>
+				<td>
+					<p>
+						<img width="457" src="../../images/Fan_05.jpg" />
+					</p>
+					<p>
+						<img width="339" src="../../images/Fan_06.jpg" />
+					</p>
+					<p>&nbsp;</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>&nbsp;</p>
+	<h2>
+		<a name="knifes">Knifes</a>
+	</h2>
+	<p>
+		<span style="color: rgb(25, 25, 25);">Painting with a knife
+			produces quite a different result to a brush. They are excellent
+			for&nbsp;producing a range of effects, from textured impasto work </span><span
+			style="color: rgb(25, 25, 25);">to sweeping areas of flat
+			color, even tiny shapes of color. </span>Different shaped painting knives
+		obviously produce different effects.
+	</p>
+	<ul>
+		<li><span>A short blade produces angular strokes</span></li>
+		<li>A long blade makes it easy to put down sweeps of color.</li>
+		<li>A sharp-pointed blade will allow you to scratch into the
+			paint for sgraffito effects&nbsp;.</li>
+	</ul>
+	<p>Useless to say that Knifes are one of the most used paint tools
+		by artists.</p>
+	<p>
+		<img height="250" src="../../images/Knife1.jpg" /><img height="250"
+			src="../../images/Knife5.jpg" /><img height="250"
+			src="../../images/Knife2.jpg" /><img height="250"
+			src="../../images/Knife4.jpg" /><img height="250"
+			src="../../images/Knife3.jpg" />
+	</p>
+	<p>With our application, a knife can be controlled by Apple Pencil
+		as following:</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>Apple Pencil</th>
+				<th>Description of Knife</th>
+			</tr>
+			<tr>
+				<td>Pressure</td>
+				<td>
+					<p>Control the thickness of color. More pressure, thinner of
+						color layer on painting support. Pressure on knife can effect
+						neither on the size of the Knife, non on the Knife form.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Altitude</td>
+				<td><span>Control Knife's vertical direction. The knife
+						lays totally on the </span>surface when the Altitude Angle is less than
+					30&deg;. The vertical angle is controlled by the Altitude of Apple
+					Pencil between 30&deg; and 90&deg;.</td>
+			</tr>
+			<tr>
+				<td>Azimuth</td>
+				<td><span>Control the knife orientation in the plan of
+						painting support. </span></td>
+			</tr>
+		</tbody>
+	</table>
+	<p>A rotation of Knife on it axis provides a lot of capabilities.
+		Unfortunately, Apple Pencil doesn't provide this information. Same as
+		Brush, the rotation is controlled by a UI Widget named as Joystick.</p>
+	<h3>
+		<a name="knifepainting">Knife Painting</a>
+	</h3>
+	<p>General Speaking, a Knife has two roles in Painting: blending
+		color and removing color. It depends on direction, orientation and
+		rotation of Knife.</p>
+	<p>When the Knife has a rotation, that means the Knife has an angle
+		with the paint surface, the motion direction of Knife has different
+		painting effect. The Knife moves to the direction of angle &lt; 90, it
+		is in Blending mode, known as Forward Painting. When it moves to
+		opposite direction (angle &gt; 90), it is a Cleaning mode, known as
+		Backward Painting. In this mode, the quantity of the liquid on the
+		surface will decrease.</p>
+	<p>
+		<img height="250" src="../../images/KNife-Painting.png" />
+	</p>
+	<p>In the following screen shot, the rotation of the Knife is
+		45&deg;. Moving to left is in Cleaning node. Moving to right is in
+		normal Painting mode.</p>
+	<p>
+		<img width="563" src="../../images/ForwardBackwordKnife.jpg" />
+	</p>
+	<h3>
+		<a name="sgraffitoeffect">Sgraffito Effect</a>
+	</h3>
+	<p>
+		In<span> Cleaning mode, w</span>hen a knife stands up near to 90* or
+		rotate near to 90&deg; or - 90&deg;, it produces the <strong>Sgraffito</strong>
+		effects. The effects are pressure sensitive.
+	</p>
+	<table>
+		<tbody>
+			<tr>
+				<th><span>Description</span>&asymp;</th>
+				<th><span>Description</span></th>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+					</p>
+					<p>
+						Knife rotation <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
+					</p>
+				</td>
+				<td>
+					<p>
+						<img height="250" src="../../images/Sgraffito_01.jpg" />
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30&deg;
+					</p>
+					<p>
+						Knife rotation <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+					</p>
+				</td>
+				<td>
+					<p>
+						<img height="250" src="../../images/Sgraffito_02.jpg" />
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>
+						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30&deg;
+					</p>
+					<p>
+						Knife rotation <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+					</p>
+				</td>
+				<td>
+					<p>
+						<img height="250" src="../../images/Sgraffito_03.jpg" />
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>&nbsp;</p>
+	<h3>
+		<a name="pickupgesture">Pick Up Gesture</a>
+	</h3>
+	<p>In general, when we paint slowly, most of color will leave on
+		the surface. But some time, we need to pick up the color from painting
+		surface. Typically, it is the purpose of Palette. A gesture is
+		provided to meet this need. This gesture consists of the following
+		steps:</p>
+	<ol>
+		<li>Select a more thick color region</li>
+		<li>Press you knife hardly on paint surface</li>
+		<li>And then, rise it up very quickly</li>
+	</ol>
+	<p>It performs like a Tap. The most important is to leave the
+		surface as quickly as possible.</p>
+	<h3>
+		<a name="chamoisleathers">Chamois Leathers</a>
+	</h3>
+	<p>Chamois Leather is excellent when a soft finish is required. The
+		Chamois is an ideal tool for cleaning paper surfaces and dip pen nibs,
+		also offers protection when changing 'needle pointed' nibs.</p>
+	<h2>
+		<a name="utilitytools">Utility Tools</a>
+	</h2>
+	<h3>
+		<a name="colorfilling">Color Filling</a>
+	</h3>
+	<p>
+		This tool is used to select a Color on painting support. It isn't a
+		really Painting tool. It simulates the action to fill <span>the
+			current painting tool with </span>Color such as Tube, Knife, Brush, etc.
+		This action is similar as you dip your painting tool in color liquid.
+	</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>Drawing Tool</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>Tube</td>
+				<td>
+					<p>Select a color of tube</p>
+					<p>
+						The <span>quantity of filling is independent of pressure <span>of
+								Apple Pencil when you click on Painting support or color icon.
+								It is maximum. </span></span>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Knife</td>
+				<td>
+					<p>Select a color and fill the current knife with this color
+						liquid.</p>
+					<p>The quantity of filling depends on the pressure of Apple
+						Pencil when you click on Painting support or color icon</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Brush</td>
+				<td>
+					<p>
+						<span>Select a color and fill the current brush with this
+							color liquid.</span>
+					</p>
+					<p>
+						<span><span>The quantity of filling depends on the
+								pressure of Apple Pencil when you click on Painting support or
+								color icon</span></span>
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>When you select the Color Picker, the current drawing tool gets
+		disabled. It will be enabled after the selection operation.</p>
+	<p>
+		The color selected is a pure color without any light and <span>shadow
+			influence by the 3D display engine</span>.
+	</p>
+	<h3>
+		<a name="colorpatternpicker">Color Pattern Picker</a>
+	</h3>
+	<p>This tool selects a color pattern using the Pickup Gesture. The
+		current painting tool gets clean before the color pattern pickup.</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>Drawing Tool</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>Knife</td>
+				<td>
+					<p>Select a color pattern for the current knife.</p>
+					<p>The quantity of filling depends on the pressure of Apple
+						Pencil when you click on Painting support.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Brush</td>
+				<td>
+					<p>Select a color pattern for the current brush.</p>
+					<p>The quantity of filling depends on the pressure of Apple
+						Pencil when you click on Painting support.</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<span>Same as Color Filling, the color selected is a pure color
+			without any light and </span><span>shadow influence by the 3D display
+			engine</span><span>.</span>
+	</p>
+	<h2>
+		<a name="fluffymop">Fluffy Mop</a>
+	</h2>
+	<p>
+		<span style="color: rgb(37, 35, 35);"><span
+			style="color: rgb(37, 35, 35);">The tool can be used to
+				eradicate paintbrush marks, and smooth and little blur the liquid
+				surface. It doesn't touch the Wetness <span
+				style="color: rgb(37, 35, 35);">of color on Painting support</span>.
+		</span></span>
+	</p>
+	<table>
+		<tbody>
+			<tr>
+				<th style="text-align: center;">Before Fluffy Mop</th>
+				<th style="text-align: center;">After Fluffy Mop</th>
+			</tr>
+			<tr>
+				<td><img height="250" src="../../images/NormalEffect.jpg" /></td>
+				<td>
+					<p>
+						<img width="273" src="../../images/FluffyMopEffect.jpg" />
+					</p>
+					<p>&nbsp;</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>&nbsp;</p>
+</body>
+</html>

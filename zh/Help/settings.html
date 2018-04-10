@@ -1,0 +1,159 @@
+--- 
+layout: cn 
+title: Settings
+category: User's Guide 
+next: {url: advanced_features.html, title: Advanced Features}
+previous: {url: gestures.html, title: Gestures }
+---
+<html>
+<body>
+	<h2>Layers</h2>
+	<table>
+		<tbody>
+			<tr>
+				<th scope="col">Property</th>
+				<th scope="col">Description</th>
+				<th scope="col">Value</th>
+			</tr>
+			<tr>
+				<td>Focus visibility</td>
+				<td>The alpha value of layer opaque for multiple layers.</td>
+				<td>0~100%, default is 50%
+					<p>If this value is too high, the bottom layer would be covered
+						by the top one.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Show surface</td>
+				<td>Whether or not to display the surface when drawing.</td>
+				<td>Default is true</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Generals</h2>
+	<table>
+		<tbody>
+			<tr>
+				<th scope="col">Property</th>
+				<th scope="col">Description</th>
+				<th scope="col">Value</th>
+			</tr>
+			<tr>
+				<td>Silence on error</td>
+				<td>Play sound or not when error happens</td>
+				<td>Default is false.</td>
+			</tr>
+			<tr>
+				<td>Pencil Sensibility</td>
+				<td>The sensibility of Apple Pencil</td>
+				<td>From 1.0 ~ 5.0, and the default value is 3.0.</td>
+			</tr>
+			<tr>
+				<td>Enable Auto Save(m)</td>
+				<td>Whether or not to save the artworks automatically. You can
+					also specify a time interval value between 2 save works.</td>
+				<td>Default is true, and the time interval value is from 1
+					minute to 10 minutes, the default value is 2 minutes.</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Painting Tools</h2>
+	<table>
+		<tbody>
+			<tr>
+				<th scope="col">Property</th>
+				<th scope="col">Description</th>
+				<th scope="col">Value</th>
+			</tr>
+			<tr>
+				<td>Number of Recent Tools</td>
+				<td>The max number of recording recent used painting tools,
+					please see Recent Tools in <a href="toolbar.html">Toolbar</a> for
+					more details.
+				</td>
+				<td>From 1 ~ 9, and the default value is 8.</td>
+			</tr>
+			<tr>
+				<td>Auto Hide Tools Panels(s)</td>
+				<td>Hide painting tool selector(both Recent Tools and Painting
+					Tools) if it not be used within a long time.</td>
+				<td>Default is true, and the tools panels will be hidden after
+					6 ~ 30 seconds.</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Painting Toolbar</h2>
+	<table border="1">
+		<tbody>
+			<tr>
+				<th scope="col">Property</th>
+				<th scope="col">Description</th>
+				<th scope="col">Value</th>
+			</tr>
+			<tr>
+				<td>Hide automatically</td>
+				<td>Enable to hide <a href="toolbar.html">floating painting
+						toolbars</a> while drawing.
+					<p>As you know, the toolbar is very useful for selecting
+						different actions, but at sometimes, we need to hide them to get a
+						clean workspace.</p>
+				</td>
+				<td>Default is true.</td>
+			</tr>
+			<tr>
+				<td>Delay to Show(s)</td>
+				<td>Whether or not to delay to show the Painting Tool bar.
+					<p>No matter the toolbar is hidden manually or automatically,
+						it will be displayed later. This setting is very important for
+						continuity drawing.</p>
+				</td>
+				<td>Default is false, but you can change the delay time through
+					1 second to 10 seconds.</td>
+			</tr>
+			<tr>
+				<td>Show/Hide Gestures</td>
+				<td>Whether or not to show/hide the toolbar with one finger tap
+					gesture.</td>
+				<td>Default is true</td>
+			</tr>
+		</tbody>
+	</table>
+	<h2>Gestures</h2>
+	<table>
+		<tbody>
+			<tr>
+				<th scope="col">Property</th>
+				<th scope="col">Description</th>
+				<th scope="col">Value</th>
+			</tr>
+			<tr>
+				<td>Undo</td>
+				<td>Enable one finger swipe left to undo.</td>
+				<td>Default is true.</td>
+			</tr>
+			<tr>
+				<td>Redo</td>
+				<td>Enable one finger swipe right to redo.</td>
+				<td>Default is true</td>
+			</tr>
+			<tr>
+				<td>Clean</td>
+				<td>Enable one finger swipe up to clean current painting tool.</td>
+				<td>Default is true</td>
+			</tr>
+			<tr>
+				<td>Pattern picker</td>
+				<td>Enable one finger swipe down to switch to pattern picker.</td>
+				<td>Default is true</td>
+			</tr>
+			<tr>
+				<td>AutoReset</td>
+				<td>Enable two fingers single touch to enable/disable auto
+					reset of painting tool.</td>
+				<td>Default is true</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>More details about gestures, please see this link..</p>
+</body>
+</html>

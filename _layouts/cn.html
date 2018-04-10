@@ -21,7 +21,28 @@
 		<h1>{{page.title}}</h1>
 		{{content}}
 		
-		<p><a href = "https://soyatec.github.io/oilpainting/zh">返回主页</a></p>
+		<hr>
+		<ul>
+			<li>Go
+				<p>
+					<a href="https://soyatec.github.io/oilpainting/zh">返回首页</a>
+				</p>
+			</li> 
+			{% if page.previous != nil%}
+			<li>上一页
+				<p>
+					<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+				</p>
+			</li> 
+			{% endif %}
+			{% if page.next != nil %}
+			<li>下一页
+				<p>
+					<a href="{{page.next.url}}">{{page.next.title}}</a>
+				</p>
+			</li> 
+			{% endif%}
+		</ul>
 		<hr>
 		{% include disqus.html %}
 		<footer class="site-footer">
