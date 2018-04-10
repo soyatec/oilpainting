@@ -21,9 +21,14 @@
 		<h1>{{page.title}}</h1>
 		{{content}}
 
-		<p>
-			<a href="https://soyatec.github.io/oilpainting">Back to home</a>
-		</p>
+		<table border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><a href="{{page.back}}">Back</a></th>
+      <th scope="col"><a href="{{page.next}}">Next</a></th>
+    </tr>
+  </tbody>
+</table>
 		<hr>
 		{% include disqus.html %}
 		<footer class="site-footer">
