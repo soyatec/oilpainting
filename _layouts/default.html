@@ -22,14 +22,12 @@
 		{{content}}
 		
 		<section class="page-header">
-			<ul>
 			{% if page.previous != nil%}
-				<li>Back: <a href="{{page.previous.url}}" class="btn">{{page.previous.title}}</a></li>
+			<a href="{{page.previous.url}}" class="btn">{{page.previous.title}}</a>
 			{% endif %}
 			{% if page.next != nil %}
-				<li>Next: <a href="{{page.next.url}}" class="btn">{{page.next.title}}</a></li>
+			<a href="{{page.next.url}}" class="btn">{{page.next.title}}</a>
 			{% endif%}
-			</ul>
 		</section>
 		<hr>
 		{% include disqus.html %}
