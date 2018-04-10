@@ -7,417 +7,445 @@ next: {url: workshop.html, title: Workshop }
 ---
 <html>
 <body>
-	<h2>Document</h2>
-	<h4>Name</h4>
-	<p>The name of the painting is used to identify the paining to
-		others, it can be any characters.</p>
-	<h4>Group</h4>
-	<p>The group in fact is the 'tags' or 'labels' of the painting
-		files, you can also find it from 'Files' app of iOS.</p>
-	<h4>Location</h4>
-	<p>The location is used to allow you to choose where to store your
-		painting files. By default, your painting file will be stored in the
-		sandbox(default documents directory of app) of your iPad. But if you
-		enabled the iCloud storage from Settings -> Apple ID -> iCloud ->
-		@telier - Oil Painting, you can also store your painting file to
-		iCloud server.</p>
-	<h2>Constraint</h2>
-	<h4>Size</h4>
-	<p>The size means the dimention of the new painting, there are
-		several supported dimentions:</p>
-	<ul>
-		<li>4K
-			<p>4096x2160</p>
+	<h2>
+		<a name="document">Document</a>
+	</h2>
+	<ol>
+		<li>Name
+			<p>The name of the painting is used to identify the paining to
+				others, it can be any characters.</p>
 		</li>
-		<li>2K
-			<p>2048x1080</p>
+		<li>Group
+			<p>The group in fact is the 'tags' or 'labels' of the painting
+				files, you can also find it from 'Files' app of iOS.</p>
 		</li>
-		<li>1080p
-			<p>1920x1080</p>
+		<li>Location
+			<p>The location is used to allow you to choose where to store
+				your painting files. By default, your painting file will be stored
+				in the sandbox(default documents directory of app) of your iPad. But
+				if you enabled the iCloud storage from Settings -> Apple ID ->
+				iCloud -> @telier - Oil Painting, you can also store your painting
+				file to iCloud server.</p>
 		</li>
-		<li>720p
-			<p>1280x720</p>
+	</ol>
+
+	<h2>
+		<a name="constraint">Constraint</a>
+	</h2>
+	<ol>
+		<li>Size
+			<p>The size means the dimention of the new painting, there are
+				several supported dimentions:</p>
+			<ul>
+				<li>4K
+					<p>4096x2160</p>
+				</li>
+				<li>2K
+					<p>2048x1080</p>
+				</li>
+				<li>1080p
+					<p>1920x1080</p>
+				</li>
+				<li>720p
+					<p>1280x720</p>
+				</li>
+				<li>ScreenSize
+					<p>2048x1536 for iPad 9.7</p>
+				</li>
+				<li>9/16
+					<p>2048x1152</p>
+				</li>
+				<li>4/5
+					<p>1920x1536</p>
+				</li>
+				<li>Half ScreenSize
+					<p>1024x768 for iPad 9.7</p>
+				</li>
+				<li>Square
+					<p>1536x1536</p>
+				</li>
+				<li>Half Square
+					<p>768x768</p>
+				</li>
+			</ul>
 		</li>
-		<li>ScreenSize
-			<p>2048x1536 for iPad 9.7</p>
+		<li>Orientation
+			<p>The orientation is used to match the painting with iPad
+				screen, by default, the orientation of the painting will be matched
+				with the orientation of iPad.</p>
 		</li>
-		<li>9/16
-			<p>2048x1152</p>
+	</ol>
+
+	<h2>
+		<a name="background">Background</a>
+	</h2>
+	<ol>
+		<li>Color
+			<p>Background color is used to pre-filled the painting canvas
+				with some color.</p>
 		</li>
-		<li>4/5
-			<p>1920x1536</p>
+		<li>Surface
+			<p>Surface is a medium support where you produce your Artwork.
+				The difference of texture of medium support may influence Strokes
+				when the layer is thin. Our application supports a lot of supports
+				with different fabric texture and degree of rough</p>
+			<ul>
+				<li>Flat
+					<p>Paper: 1, Roughness: 0</p>
+				</li>
+				<li>PaperRough901b
+					<p>Paper: 2, Roughness: 3.</p>
+				</li>
+				<li>PaperHotPress90lb
+					<p>Paper: 3, Roughness: 3</p>
+				</li>
+				<li>PaperColdPress300lb
+					<p>Paper: 4, Roughness: 3</p>
+				</li>
+				<li>PaperHotPress300lb
+					<p>Paper: 5, Roughness: 3</p>
+				</li>
+				<li>PaperIndiaRough
+					<p>Paper: 6, Roughness: 4</p>
+				</li>
+				<li>CanvasTriplePrimed
+					<p>CanvasModel: 1, Roughness: 4</p>
+				</li>
+				<li>CanvasPaperTriplePrimed
+					<p>CanvasModel: 2, Roughness: 4</p>
+				</li>
+				<li>CanvasArmyDuck
+					<p>CanvasModel: 3, Roughness: 4</p>
+				</li>
+				<li>Canvas12Oz
+					<p>CanvasModel: 4, Roughness: 6</p>
+				</li>
+				<li>CanvasWave512
+					<p>CanvasModel: 5, Roughness: 6</p>
+				</li>
+				<li>Canvas15Oz
+					<p>CanvasModel: 6, Roughness: 7</p>
+				</li>
+				<li>CanvasEssentialCanvas
+					<p>CanvasModel: 7, Roughness: 7</p>
+				</li>
+				<li>CanvasSmoothCanvas
+					<p>CanvasModel: 8, Roughness: 8</p>
+				</li>
+			</ul>
+			<p>By default, the surface Flat is free to use, but if you want
+				to try other surfaces, you need to unlock them from store of
+				Gallery.</p>
+			<table>
+				<tbody>
+					<tr>
+						<th><span>Description</span></th>
+						<th><span>Screen Shot</span></th>
+					</tr>
+					<tr>
+						<td><span>The surface is completely flat.</span></td>
+						<td><img width="350" src="../images/SurfaceNonTexture.jpg" /></td>
+					</tr>
+					<tr>
+						<td><span>The surface has a texture. But the surface
+								texture is shown.</span></td>
+						<td><img height="250" src="../images/SurfaceTexture_Show.jpg" /></td>
+					</tr>
+					<tr>
+						<td><span>The surface has a texture. And the surface
+								texture is hidden.</span></td>
+						<td><img width="340" src="../images/SurfaceTexture.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>The type of Painting surface is selected during the Artwork
+				creation. It cannot be changed afterwards.</p>
+			<p>The available Painting surfaces are listed in the degree of
+				rough in ascending order:</p>
+			<p>Rough degree: 3</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperColdPress3001b_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperColdPress3001b_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperColdPress3001b_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperColdPress3001b_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperHotPress901b_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperHotPress901b_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperHotPress901b_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperHotPress901b_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperHotPress3001b_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperHotPress3001b_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperHotPress3001b_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperHotPress3001b_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperRough901b_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperRough901b_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperRough901b_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperRough901b_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>Rough degree: 4</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperIndiaRough_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/PaperIndiaRough_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/PaperIndiaRough_Knife_N.jpg" /></td>
+						<td>
+							<p>
+								<img height="250" src="../images/PaperIndiaRough_Filbert_N.jpg" />
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasPaperTriplePrimed_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasPaperTriplePrimed_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasPaperTriplePrimed_Knifet_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasPaperTriplePrimed_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasTriplePrimed_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasTriplePrimed_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasTriplePrimed_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasTriplePrimed_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>Rough degree: 5</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasAmyDuck_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasAmyDuck_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasAmyDuck_Knife_N.jpg" /></td>
+						<td>
+							<p>
+								<img height="250" src="../images/CanvasAmyDuck_Filbert_N.jpg" />
+							</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>Rough degree: 6</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250" src="../images/Canas120z_Knife_S.jpg" /></td>
+						<td><img height="250" src="../images/Canas120z_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250" src="../images/Canas120z_Knife_N.jpg" /></td>
+						<td><img height="250" src="../images/Canas120z_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasWave512_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasWave512_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasWave512_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasWave512_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>Rough degree: 7</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250" src="../images/Canvas150z_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/Canvas150z_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250" src="../images/Canvas150z_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/Canvas150z_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasEssential_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasEssential_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasEssential_Knife_N.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasEssential_Filbert_N.jpg" /></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>&nbsp;</p>
+			<p>Rough degree: 8</p>
+			<table>
+				<tbody>
+					<tr>
+						<th style="text-align: center;">Knife</th>
+						<th style="text-align: center;">Filbert</th>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasSmoothCanvas_Knife_S.jpg" /></td>
+						<td><img height="250"
+							src="../images/CanvasSmoothCanvas_Filbert_S.jpg" /></td>
+					</tr>
+					<tr>
+						<td><img height="250"
+							src="../images/CanvasSmoothCanvas_Knife_N.jpg" /></td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
 		</li>
-		<li>Half ScreenSize
-			<p>1024x768 for iPad 9.7</p>
-		</li>
-		<li>Square
-			<p>1536x1536</p>
-		</li>
-		<li>Half Square
-			<p>768x768</p>
-		</li>
-	</ul>
-	<h4>Orientation</h4>
-	<p>The orientation is used to match the painting with iPad screen,
-		by default, the orientation of the painting will be matched with the
-		orientation of iPad.</p>
-	<h2>Background</h2>
-	<h4>Color</h4>
-	<p>Background color is used to pre-filled the painting canvas with
-		some color.</p>
-	<h4>Surface</h4>
-	<p>Surface is a medium support where you produce your Artwork. The
-		difference of texture of medium support may influence Strokes when the
-		layer is thin. Our application supports a lot of supports with
-		different fabric texture and degree of rough</p>
-	<ul>
-		<li>Flat
-			<p>Paper: 1, Roughness: 0</p>
-		</li>
-		<li>PaperRough901b
-			<p>Paper: 2, Roughness: 3.</p>
-		</li>
-		<li>PaperHotPress90lb
-			<p>Paper: 3, Roughness: 3</p>
-		</li>
-		<li>PaperColdPress300lb
-			<p>Paper: 4, Roughness: 3</p>
-		</li>
-		<li>PaperHotPress300lb
-			<p>Paper: 5, Roughness: 3</p>
-		</li>
-		<li>PaperIndiaRough
-			<p>Paper: 6, Roughness: 4</p>
-		</li>
-		<li>CanvasTriplePrimed
-			<p>CanvasModel: 1, Roughness: 4</p>
-		</li>
-		<li>CanvasPaperTriplePrimed
-			<p>CanvasModel: 2, Roughness: 4</p>
-		</li>
-		<li>CanvasArmyDuck
-			<p>CanvasModel: 3, Roughness: 4</p>
-		</li>
-		<li>Canvas12Oz
-			<p>CanvasModel: 4, Roughness: 6</p>
-		</li>
-		<li>CanvasWave512
-			<p>CanvasModel: 5, Roughness: 6</p>
-		</li>
-		<li>Canvas15Oz
-			<p>CanvasModel: 6, Roughness: 7</p>
-		</li>
-		<li>CanvasEssentialCanvas
-			<p>CanvasModel: 7, Roughness: 7</p>
-		</li>
-		<li>CanvasSmoothCanvas
-			<p>CanvasModel: 8, Roughness: 8</p>
-		</li>
-	</ul>
-	<p>By default, the surface Flat is free to use, but if you want to
-		try other surfaces, you need to unlock them from store of Gallery.</p>
-	<table>
-		<tbody>
-			<tr>
-				<th><span>Description</span></th>
-				<th><span>Screen Shot</span></th>
-			</tr>
-			<tr>
-				<td><span>The surface is completely flat.</span></td>
-				<td><img width="350" src="../images/SurfaceNonTexture.jpg" /></td>
-			</tr>
-			<tr>
-				<td><span>The surface has a texture. But the surface
-						texture is shown.</span></td>
-				<td><img height="250" src="../images/SurfaceTexture_Show.jpg" /></td>
-			</tr>
-			<tr>
-				<td><span>The surface has a texture. And the surface
-						texture is hidden.</span></td>
-				<td><img width="340" src="../images/SurfaceTexture.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>The type of Painting surface is selected during the Artwork
-		creation. It cannot be changed afterwards.</p>
-	<p>The available Painting surfaces are listed in the degree of
-		rough in ascending order:</p>
-	<p>Rough degree: 3</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperColdPress3001b_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperColdPress3001b_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperColdPress3001b_Knife_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperColdPress3001b_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperHotPress901b_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperHotPress901b_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperHotPress901b_Knife_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperHotPress901b_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperHotPress3001b_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperHotPress3001b_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperHotPress3001b_Knife_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperHotPress3001b_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperRough901b_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperRough901b_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperRough901b_Knife_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperRough901b_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>Rough degree: 4</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperIndiaRough_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/PaperIndiaRough_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/PaperIndiaRough_Knife_N.jpg" /></td>
-				<td>
-					<p>
-						<img height="250" src="../images/PaperIndiaRough_Filbert_N.jpg" />
-					</p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasPaperTriplePrimed_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasPaperTriplePrimed_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasPaperTriplePrimed_Knifet_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasPaperTriplePrimed_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasTriplePrimed_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasTriplePrimed_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasTriplePrimed_Knife_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasTriplePrimed_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>Rough degree: 5</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/CanvasAmyDuck_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasAmyDuck_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/CanvasAmyDuck_Knife_N.jpg" /></td>
-				<td>
-					<p>
-						<img height="250" src="../images/CanvasAmyDuck_Filbert_N.jpg" />
-					</p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>Rough degree: 6</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/Canas120z_Knife_S.jpg" /></td>
-				<td><img height="250" src="../images/Canas120z_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/Canas120z_Knife_N.jpg" /></td>
-				<td><img height="250" src="../images/Canas120z_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/CanvasWave512_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasWave512_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/CanvasWave512_Knife_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasWave512_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>Rough degree: 7</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/Canvas150z_Knife_S.jpg" /></td>
-				<td><img height="250" src="../images/Canvas150z_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250" src="../images/Canvas150z_Knife_N.jpg" /></td>
-				<td><img height="250" src="../images/Canvas150z_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasEssential_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasEssential_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasEssential_Knife_N.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasEssential_Filbert_N.jpg" /></td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
-	<p>Rough degree: 8</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Knife</th>
-				<th style="text-align: center;">Filbert</th>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasSmoothCanvas_Knife_S.jpg" /></td>
-				<td><img height="250"
-					src="../images/CanvasSmoothCanvas_Filbert_S.jpg" /></td>
-			</tr>
-			<tr>
-				<td><img height="250"
-					src="../images/CanvasSmoothCanvas_Knife_N.jpg" /></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
+	</ol>
 </body>
 </html>
