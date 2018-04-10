@@ -21,14 +21,14 @@
 		<h1>{{page.title}}</h1>
 		{{content}}
 		
-		<section class="page-header">
+		<ul>
 			{% if page.previous != nil%}
-			<a href="{{page.previous.url}}" class="btn">{{page.previous.title}}</a>
+			<li>Back: <a href="{{page.previous.url}}" class="btn">{{page.previous.title}}</a></li>
 			{% endif %}
 			{% if page.next != nil %}
-			<a href="{{page.next.url}}" class="btn">{{page.next.title}}</a>
+			<li>Next: <a href="{{page.next.url}}">{{page.next.title}}</a></li>
 			{% endif%}
-		</section>
+		</ul>
 		<hr>
 		{% include disqus.html %}
 		<footer class="site-footer">
