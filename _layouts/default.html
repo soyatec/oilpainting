@@ -20,15 +20,14 @@
 	<section class="main-content">
 		<h1>{{page.title}}</h1>
 		{{content}}
-
-		<table border="0" align="center" cellpadding="20" cellspacing="20">
-			<tbody>
-				<tr>
-					<th scope="col"><a href="{{page.back}}">Back</a></th>
-					<th scope="col"><a href="{{page.next}}">Next</a></th>
-				</tr>
-			</tbody>
-		</table>
+		<div class="section-nav">
+			<div class="left align-right">
+				<a href="{{page.previous}}" class="prev">Back</a>
+			</div>
+			<div class="right align-left">
+				<a href="{{page.next}}" class="next">Next</a>
+			</div>
+		</div>
 		<hr>
 		{% include disqus.html %}
 		<footer class="site-footer">
