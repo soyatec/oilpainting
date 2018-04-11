@@ -1,168 +1,125 @@
 --- 
 layout: cn 
-title: Painting Tools
+title: 绘画工具
 category: User's Guide 
-next: {url: tool_controller.html, title: Tool Controller}
-previous: {url: toolbar.html, title: Tool Bar }
+next: {url: tool_controller.html, title: 工具控制器}
+previous: {url: toolbar.html, title: 工具条 }
 ---
 <html>
 <body>
-	<p>A painting tool is used to produce the artwork directly. There
-		are several kinds of painting tools, brushes, knifes, tubes and Fluffy
-		Mop and so on.</p>
+	<p>绘画工具是用来油画创作的基础工具，我们的产品支持绝大部分的油画工具，如画笔，画刀等。</p>
 	<ul>
-		<li><a href="#overview">Overview</a></li>
-		<li><a href="#colortubes">Color Tubes</a></li>
-		<li><a href="#brushes">Brushes</a></li>
+		<li><a href="#overview">介绍</a></li>
+		<li><a href="#colortubes">颜料管</a></li>
+		<li><a href="#brushes">刷子</a></li>
 		<ul>
-			<li><a href="#flat">Flat</a></li>
-			<li><a href="#filbert">Filbert</a></li>
-			<li><a href="#fan">Fan</a></li>
+			<li><a href="#flat">平头刷</a></li>
+			<li><a href="#filbert">圆头刷</a></li>
+			<li><a href="#fan">扇形刷</a></li>
 		</ul>
-		<li><a href="#knifes">Knifes</a>
+		<li><a href="#knifes">画刀</a>
 			<ul>
-				<li><a href="#knifepainting">Knife Painting</a></li>
-				<li><a href="#sgraffitoeffect">Sgraffito Effect</a></li>
-				<li><a href="#pickupgesture">Pick Up Gesture</a></li>
-				<li><a href="#chamoisleathers">Chamois Leathers</a></li>
+				<li><a href="#knifepainting">画刀画法</a></li>
+				<li><a href="#sgraffitoeffect">透明薄画效果</a></li>
+				<li><a href="#pickupgesture">模式选择手势</a></li>
 			</ul></li>
-		<li><a href="#utilitytools">Utility Tools</a></li>
+		<li><a href="#utilitytools">使用工具</a></li>
 		<ul>
-			<li><a href="#colorfilling">Color Filling</a></li>
-			<li><a href="#colorpatternpicker">Color Pattern Picker</a></li>
-			<li><a href="#fluffymop">Fluffy Mop</a></li>
+			<li><a href="#colorfilling">颜料填充</a></li>
+			<li><a href="#colorpatternpicker">模式选择</a></li>
 		</ul>
 	</ul>
 	<h2>
-		<a name="overview">Overview</a>
+		<a name="overview">介绍</a>
 	</h2>
-	<p>During the painting process, a painting tool may have different
-		states. For example, Knife and Brush has three states: Clean, Dirty,
-		Pattern.</p>
+	<p>在绘画过程中，画笔的状态可能有以下三种：清洁，使用，固定模式</p>
 	<table>
 		<tbody>
 			<tr>
-				<th>State</th>
-				<th>Description</th>
-				<th colspan="1">Transition</th>
+				<th>状态</th>
+				<th>描述</th>
+				<th colspan="1">状态转变</th>
 			</tr>
 			<tr>
-				<td>Clean</td>
-				<td>Tool has a non color</td>
-				<td colspan="1">
-					<p>A Clean tool becomes Dirty when we use it to paint to
-						interact with the colors on surface.</p>
-					<p>If the option Auto Reset is enabled, this action cleans the
-						current saved pattern. In this case, the tool has the same effect
-						as the option Auto Clean.</p>
-				</td>
-			</tr>
-			<tr>
-				<td>Dirty</td>
-				<td>Tool has kept some colors produced during the painting
-					process.</td>
-				<td colspan="1">
-					<p>A Dirty tool can be back to Clean by the button Clean. If
-						the option Auto Reset is disabled, a Dirty tool keeps dirty
-						between strokes.</p>
-					<p>If the option Auto Reset is enabled, it comes back to
-						Pattern state after each stroke. if a Pattern state has no color,
-						it is in Clean state.</p>
-					<p>The temporary Dirty state can be saved as a Pattern to be
-						reused easily afterhands.</p>
-				</td>
-			</tr>
-			<tr>
-				<td>Pattern</td>
-				<td>Tool has some colors and</td>
+				<td>清洁</td>
+				<td>没有蘸取颜料或选择模式</td>
 				<td colspan="1">
 					<p>
-						The tool like Brush and Knife may become Dirty when it <span>interacts
-							with the colors on surface. <span>The state is known as
-								color pattern. This state can be saved and then reused
-								repeatedly by the option Auto Reset. </span>
-						</span>
+						画笔将在蘸取颜料或选择模式后转变为<strong>使用</strong>状态
 					</p>
 					<p>
-						<span><span>This state goes back to Clean by the
-								button, Clean.</span></span>
+						如果<strong>自动重置</strong>功能是打开的，<strong>画笔清洁</strong>功能将会将笔的模式销毁，重置为清洁状态，这样的话，跟设置<strong>自动清洁</strong>是一样的。
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>使用</td>
+				<td>蘸取颜料到绘画中使用或选取固定模式到绘画中使用的画笔状态。</td>
+				<td colspan="1">
+					<p>
+						使用中的画笔，自始至终都是这个状态，只有通过<strong>画笔清洁</strong>或者是<strong>自动重置</strong>功能来使之变为清洁状态。
+					</p>
+					<p>
+						如果<strong>自动重置</strong>功能是关闭的，在绘制过程中，画笔将一直保持使用的状态。
+					</p>
+					<p>
+						如果<strong>自动重置</strong>功能是打开的，在每一次绘画完成之后，画笔将自动重置为绘画之前的状态。
+					</p>
+					<p>注意：画笔中蘸取的颜料在每一次的绘制过程中都会被消耗，这点与现实创作中是类似的。</p>
+				</td>
+			</tr>
+			<tr>
+				<td>固定模式</td>
+				<td>选择了固定的模式（保存不同的颜料，厚度等，如混色后的模式）</td>
+				<td colspan="1">
+					<p>
+						固定的模式可以在绘制过程中通过<strong>自动重置</strong>一次又一次的重复使用。
+					</p>
+					<p>
+						固定模式的状态能通过<strong>画笔清洁</strong>功能返回到清洁状态。
 					</p>
 					<p>&nbsp;</p>
 				</td>
 			</tr>
 		</tbody>
 	</table>
-	<p>The Tube Tool is simplest painting tool since it has no
-		bi-directional interaction with canvas. The purpose of Tube is enabled
-		to put some color liquid on canvas. Therefore, the options Auto Reset
-		and Auto Clean don't make sense for Tube.</p>
-	<p>
-		The option Auto Reset is a property of Painting Tool.<span> <span>The
-				change on these options is applied to the current Painting Tool. And
-				t</span></span>he both options cannot be used together. Only one of them can be
-		enabled.
-	</p>
-	<p>When the option Auto Reset is enabled, the pattern is saved on
-		the following cases:</p>
-	<ol>
-		<li>Pickup action over <span>the Color bowl</span></li>
-		<li><span>Using Pickup tool</span></li>
-		<li>Clean action</li>
-	</ol>
 	<h2>
-		<a name="colortubes">Color Tubes</a>
+		<a name="colortubes">颜料管</a>
 	</h2>
-	<p>Color Tube contains color liquid. It is used to add some color
-		liquid on the support directly. The pressure of Apple Pencil controls
-		the quantity of color: more pressure, bigger diameter of color liquid
-		on canvas. The direction of Altitude and Azimuth has no effect.</p>
-	<h2>
-		<a name="brushes">Brushes</a>
-	</h2>
+	<p>颜料管是一个极简单的工具，它负责提供一些液体的颜料，我们只能通过Apple
+		Pencil感知的压力判断提供颜料管提供的颜料的多少，其他的角度和方位等对颜料管是无用的。</p>
 	<p>
-		<span style="color: rgb(0, 0, 0);">Brushes are the most
-			important part of your equipment. Brushes come in different shapes, t<span
-			style="color: rgb(0, 0, 0);">he most common shapes brushes
-				come in are: Flats, Filberts, Fans and Mops</span><span
-			style="color: rgb(0, 0, 0);">. The detail of each is described
-				in the following paragraphs. </span>
-		</span>
+		当然，<strong>自动重置</strong>和<strong>自动清洁</strong>队颜料管也是无用的。
 	</p>
-	<p>All these Brushes have a common behaviour and control. Comparing
-		to Knifes, Brushes leaves always Bristle traces in strokes, and
-		bristles of Brush spread slightly on the pressure you applied to
-		painting support. Same as Knife, the pressure plays an important role
-		on the thickness of wet color layer. The thickness is
-		inverse-proportional to the pressure: more pressure, thinner of the
-		layer.</p>
+	<h2>
+		<a name="brushes">刷子</a>
+	</h2>
+	<p>刷子是油画创作中的常用工具，根据不同的形状，我们可以分为圆头刷，扇形刷，平头刷等。</p>
+	<p>相对于画刀来说，刷子的特点也很明显，有效的纹路，柔软的质感等等。在我们的产品中，不论是画刀还是刷子，我们都在极大程度的模拟现实油画中各种画笔对于颜料的厚度，用力大小等不同方面的效果。</p>
 	<table>
 		<tbody>
 			<tr>
 				<th>Apple Pencil</th>
-				<th>Description of Brushes</th>
+				<th>画笔描述</th>
 			</tr>
 			<tr>
-				<td>Pressure</td>
+				<td>压力</td>
 				<td>
-					<p>Control the thickness of color. More pressure, thinner of
-						color layer on painting support. Pressure on the painting support
-						plays slightly a role on the widespread of Brush's bristles.</p>
-					<p>
-						Here are the screen shots of Brushes<span>&nbsp;</span>that shows
-						the influence of pressure on the texture of Stroke.
-					</p>
+					<p>控制颜料的厚度。压力越大，获得的图层就越薄。相反的，画板对画笔的毛刷的压力就很小了。</p>
+					<p>下面是画笔的屏幕截图，显示压力对笔触纹理的影响。</p>
 					<table>
 						<tbody>
 							<tr>
-								<td>Filbert</td>
-								<td><img height="150" src="../../images/FilbertPressure.jpg" /></td>
+								<td>圆头笔</td>
+								<td><img height="150"
+									src="../../images/FilbertPressure.jpg" /></td>
 							</tr>
 							<tr>
-								<td>Falt</td>
+								<td>平头笔</td>
 								<td><img height="150" src="../../images/FlatPressure.jpg" /></td>
 							</tr>
 							<tr>
-								<td>Fan</td>
+								<td>扇形笔</td>
 								<td><img height="150" src="../../images/FanPressure.jpg" /></td>
 							</tr>
 						</tbody>
@@ -170,46 +127,35 @@ previous: {url: toolbar.html, title: Tool Bar }
 				</td>
 			</tr>
 			<tr>
-				<td>Altitude</td>
-				<td>Control Brush's vertical direction.</td>
+				<td>高度</td>
+				<td>控制画笔的垂直度。</td>
 			</tr>
 			<tr>
-				<td>Azimuth</td>
-				<td>Control the Brush's orientation in the plan of painting
-					support.</td>
+				<td>方位</td>
+				<td>控制画笔的绘画方向。</td>
 			</tr>
 		</tbody>
 	</table>
-	<p>The direction of brush head can be controlled by the Joystick to
-		rotate on the axis of Apple Pencil.</p>
+	<p>画笔头的方向可以通过用Apple Pencil控制操纵杆上的轴来旋转。</p>
 	<h3>
-		<a name="flat">Flat</a>
+		<a name="flat">平头笔</a>
 	</h3>
-	<p>
-		<span style="color: rgb(0, 0, 0);"><span
-			style="color: rgb(0, 0, 0);"><span
-				style="color: rgb(0, 0, 0);">A Flat brush has hairs arranged
-					in a rectangular shape that is longer than it is wide. From the
-					side it is narrow. The Flat is the most versatile of brushes. You
-					can make a broad stroke, a narrow stroke and, with a little twist,
-					a triangular stroke.</span></span></span>
-	</p>
+	<p>平头笔用于制造宽阔、拖扫式的笔触；可用平头侧边画出粗糙的线条；转动笔身进行拖扫式用笔，可出现粗细不均的笔触。</p>
+
 	<table>
 		<tbody>
 			<tr>
-				<th>Description</th>
-				<th>Screen shot</th>
+				<th>描述</th>
+				<th>抓屏</th>
 			</tr>
 			<tr>
 				<td>
 					<p>
-						<span>Azimuth <span style="color: rgb(0, 0, 0);">~</span>
-							0&deg;
+						<span>方位 <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
 						</span>
 					</p>
 					<p>
-						<span>Altitude <span style="color: rgb(0, 0, 0);">~</span>
-							30
+						<span>高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 						</span>
 					</p>
 				</td>
@@ -218,11 +164,10 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
 					</p>
 					<p>
-						<span>Altitude <span style="color: rgb(0, 0, 0);">~</span>
-							30
+						<span>高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 						</span>
 					</p>
 				</td>
@@ -231,13 +176,13 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						<span>Azimuth <span style="color: rgb(0, 0, 0);">~</span>
+						<span>方位 <span style="color: rgb(0, 0, 0);">~</span>
 							70&deg;
 						</span>
 					</p>
 					<p>
-						<span><span>Altitude <span
-								style="color: rgb(0, 0, 0);">~</span> 30
+						<span><span>高度 <span style="color: rgb(0, 0, 0);">~</span>
+								30
 						</span></span>
 					</p>
 				</td>
@@ -246,55 +191,38 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 70&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> 70&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td><img width="300" src="../../images/Flat_05.jpg" /></td>
 			</tr>
 			<tr>
-				<td>Dot strokes with different angles and pressures</td>
+				<td>不同的角度和压力</td>
 				<td><img width="300" src="../../images/Flat_06.jpg" /></td>
 			</tr>
 		</tbody>
 	</table>
-	<p>
-		<span style="color: rgb(0, 0, 0);"><span
-			style="color: rgb(0, 0, 0);"><span
-				style="color: rgb(0, 0, 0);"><br /></span></span></span>
-	</p>
 	<h3>
-		<a name="filbert">Filbert</a>
+		<a name="filbert">圆头笔</a>
 	</h3>
-	<p>
-		<span style="color: rgb(0, 0, 0);">A Filbert looks like a Flat
-			with the corners rounded. The stroke is oval shaped or half circular.
-			They are used when you want a softer edge or for smaller blends than
-			you get with a Flat. <span style="color: rgb(25, 25, 25);">Because
-				of its distinctive, semi-circular shape, a fan brush can easily
-				create a series of marks in your painting that are repetitive and
-				predictable. </span>
-		</span>
-	</p>
-	<p>
-		<span style="color: rgb(0, 0, 0);"><span
-			style="color: rgb(25, 25, 25);"><br /></span></span>
-	</p>
+	<p>圆头笔和平头笔很像，笔头是圆的，兼有圆头、扁平两种画笔的特性，在表现曲线状的笔触时，它是一种更优雅、更流畅的画笔。</p>
+
 	<table>
 		<tbody>
 			<tr>
-				<th>Description</th>
-				<th>Screen shot</th>
+				<th>描述</th>
+				<th>抓屏</th>
 			</tr>
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td><img width="596" src="../../images/Filbert_01.jpg" /></td>
@@ -302,10 +230,10 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td><img width="600" src="../../images/Filbert_02.jpg" /></td>
@@ -313,10 +241,10 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 70&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> 70&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 60
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 60
 					</p>
 				</td>
 				<td><img width="600" src="../../images/Filbert_03.jpg" /></td>
@@ -324,61 +252,50 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td colspan="1">
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
-				<td colspan="1"><img width="362" src="../../images/Filbert_04.jpg" /></td>
+				<td colspan="1"><img width="362"
+					src="../../images/Filbert_04.jpg" /></td>
 			</tr>
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td><img width="353" src="../../images/Filbert_05.jpg" /></td>
 			</tr>
 			<tr>
-				<td><span>Dot strokes</span> with different angles and
-					pressures</td>
-				<td><img width="353" src="../../../images/Filbert_06.jpg" /></td>
+				<td>不同的角度和压力</td>
+				<td><img width="353" src="../../images/Filbert_06.jpg" /></td>
 			</tr>
 		</tbody>
 	</table>
-	<p>
-		<span style="color: rgb(0, 0, 0);"><span
-			style="color: rgb(25, 25, 25);"><br /></span></span>
-	</p>
 	<h3>
-		<a name="fan">Fan</a>
+		<a name="fan">扇形笔</a>
 	</h3>
-	<p>
-		<span style="color: rgb(0, 0, 0);"><span
-			style="color: rgb(25, 25, 25);">Fan brush is a thin&nbsp;flat
-				brush </span><span style="color: rgb(25, 25, 25);">with the spread
-				out in a semi-circle, like a hand-held paper fan. These brushes a<span
-				style="color: rgb(25, 25, 25);">re also extremely useful for
-					mark-making. </span>
-		</span></span>
-	</p>
+	<p>扇形笔笔毛稀疏，呈扁平的扇状。用于湿画法中的轻扫与刷，或柔化过于分明的轮廓。喜欢薄画法的画家常使用这种画笔。</p>
+
 	<table>
 		<tbody>
 			<tr>
-				<th>Description</th>
-				<th>Screen shot</th>
+				<th>描述</th>
+				<th>抓屏</th>
 			</tr>
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td><img width="496" src="../../images/Fan_01.jpg" /></td>
@@ -386,10 +303,10 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -60&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> -60&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td><img width="587" src="../../images/Fan_02.jpg" /></td>
@@ -397,10 +314,10 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td><img width="358" src="../../images/Fan_08.jpg" /></td>
@@ -408,17 +325,16 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td colspan="1">
 					<p>
-						Azimuth <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
+						方位 <span style="color: rgb(0, 0, 0);">~</span> -90&deg;
 					</p>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30
 					</p>
 				</td>
 				<td colspan="1"><img width="371" src="../../images/Fan_04.jpg" /></td>
 			</tr>
 			<tr>
-				<td><span>Dot strokes</span> with different angles and
-					pressures</td>
+				<td>不同的角度和压力</td>
 				<td>
 					<p>
 						<img width="457" src="../../images/Fan_05.jpg" />
@@ -431,26 +347,17 @@ previous: {url: toolbar.html, title: Tool Bar }
 			</tr>
 		</tbody>
 	</table>
-	<p>&nbsp;</p>
 	<h2>
-		<a name="knifes">Knifes</a>
+		<a name="knifes">画刀</a>
 	</h2>
-	<p>
-		<span style="color: rgb(25, 25, 25);">Painting with a knife
-			produces quite a different result to a brush. They are excellent
-			for&nbsp;producing a range of effects, from textured impasto work </span><span
-			style="color: rgb(25, 25, 25);">to sweeping areas of flat
-			color, even tiny shapes of color. </span>Different shaped painting knives
-		obviously produce different effects.
-	</p>
+	<p>用画刀作画和画笔作画的感觉是完全不同的，画刀能达到用画笔难以达到的效果。我们的APP更是很好的利用了这一点，并且在厚涂，刮色等方面很好的模拟了实际画刀的特点。当然了，不同形状的画刀，画出的效果也截然不同。</p>
+
 	<ul>
-		<li><span>A short blade produces angular strokes</span></li>
-		<li>A long blade makes it easy to put down sweeps of color.</li>
-		<li>A sharp-pointed blade will allow you to scratch into the
-			paint for sgraffito effects&nbsp;.</li>
+		<li>短刀片会产生有角度的线条。</li>
+		<li>长刀片可以很容易地大面积涂色。</li>
+		<li>锋利的刀片可以用来修理画布上凸起的线头，清除画面的小颗粒或污点。</li>
 	</ul>
-	<p>Useless to say that Knifes are one of the most used paint tools
-		by artists.</p>
+	<p>毫无疑问地说，画刀是艺术家们使用最多的绘画工具之一。</p>
 	<p>
 		<img height="250" src="../../images/Knife1.jpg" /><img height="250"
 			src="../../images/Knife5.jpg" /><img height="250"
@@ -458,82 +365,64 @@ previous: {url: toolbar.html, title: Tool Bar }
 			src="../../images/Knife4.jpg" /><img height="250"
 			src="../../images/Knife3.jpg" />
 	</p>
-	<p>With our application, a knife can be controlled by Apple Pencil
-		as following:</p>
+	<p>在我们的工具中，画刀也能够通过Apple Pencil来很好的控制：</p>
 	<table>
 		<tbody>
 			<tr>
 				<th>Apple Pencil</th>
-				<th>Description of Knife</th>
+				<th>画刀描述</th>
 			</tr>
 			<tr>
-				<td>Pressure</td>
+				<td>压力</td>
 				<td>
-					<p>Control the thickness of color. More pressure, thinner of
-						color layer on painting support. Pressure on knife can effect
-						neither on the size of the Knife, non on the Knife form.</p>
+					<p>控制颜料的厚度。压力越大，画板上获得的图层就越薄。画刀的压力不收画刀的大小和形式的影响。</p>
 				</td>
 			</tr>
 			<tr>
-				<td>Altitude</td>
-				<td><span>Control Knife's vertical direction. The knife
-						lays totally on the </span>surface when the Altitude Angle is less than
-					30&deg;. The vertical angle is controlled by the Altitude of Apple
-					Pencil between 30&deg; and 90&deg;.</td>
+				<td>高度</td>
+				<td>
+					<p>控制刀的垂直方向的角度。当高度角小于30°时，画刀完全放置在表面上。这个角度可通过Apple
+						Pencil控制在30°和90°之间。</p>
+				</td>
 			</tr>
 			<tr>
-				<td>Azimuth</td>
-				<td><span>Control the knife orientation in the plan of
-						painting support. </span></td>
+				<td>方位</td>
+				<td><span>在绘画过程中控制画刀的方向。 </span></td>
 			</tr>
 		</tbody>
 	</table>
-	<p>A rotation of Knife on it axis provides a lot of capabilities.
-		Unfortunately, Apple Pencil doesn't provide this information. Same as
-		Brush, the rotation is controlled by a UI Widget named as Joystick.</p>
+	<p>画刀轴上的旋转能够提供很多功能。不幸的是，Apple Pencil还不支持这些。与画笔相同，画刀的旋转由Joystick来控制。</p>
+
 	<h3>
-		<a name="knifepainting">Knife Painting</a>
+		<a name="knifepainting">画刀画法</a>
 	</h3>
-	<p>General Speaking, a Knife has two roles in Painting: blending
-		color and removing color. It depends on direction, orientation and
-		rotation of Knife.</p>
-	<p>When the Knife has a rotation, that means the Knife has an angle
-		with the paint surface, the motion direction of Knife has different
-		painting effect. The Knife moves to the direction of angle &lt; 90, it
-		is in Blending mode, known as Forward Painting. When it moves to
-		opposite direction (angle &gt; 90), it is a Cleaning mode, known as
-		Backward Painting. In this mode, the quantity of the liquid on the
-		surface will decrease.</p>
+	<p>一般来说，画刀在绘画中有两个角色：混合颜色和去除颜色。这取决于画刀的方向，方向和旋转。</p>
+	<p>当画刀旋转时，即画刀与颜料表面成角度，沿着画刀的运动方向就会有不同的绘画效果。画刀向角度小于90°的方向移动时，处于混合模式，称为前向绘画；当它向相反方向（角度大于90°）移动时，这是一种清洁模式，称为“后向绘画”。在这种模式下，表面上的颜料会减少。</p>
 	<p>
 		<img height="250" src="../../images/KNife-Painting.png" />
 	</p>
-	<p>In the following screen shot, the rotation of the Knife is
-		45&deg;. Moving to left is in Cleaning node. Moving to right is in
-		normal Painting mode.</p>
+	<p>在下面的屏幕截图中，画刀的旋转是45°。向左移动是清洁，向右移动的是正常的绘画模式。</p>
 	<p>
 		<img width="563" src="../../images/ForwardBackwordKnife.jpg" />
 	</p>
 	<h3>
-		<a name="sgraffitoeffect">Sgraffito Effect</a>
+		<a name="sgraffitoeffect">透明薄涂效果</a>
 	</h3>
-	<p>
-		In<span> Cleaning mode, w</span>hen a knife stands up near to 90* or
-		rotate near to 90&deg; or - 90&deg;, it produces the <strong>Sgraffito</strong>
-		effects. The effects are pressure sensitive.
-	</p>
+	<p>在清洁模式下，当画刀方向接近90°或旋转接近90°或-90°时，会产生透明薄涂效果，而且这种效果跟压力息息相关。</p>
+
 	<table>
 		<tbody>
 			<tr>
-				<th><span>Description</span>&asymp;</th>
-				<th><span>Description</span></th>
+				<th><span>模式</span>&asymp;</th>
+				<th><span>描述</span></th>
 			</tr>
 			<tr>
 				<td>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
 					</p>
 					<p>
-						Knife rotation <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
+						旋转 <span style="color: rgb(0, 0, 0);">~</span> 0&deg;
 					</p>
 				</td>
 				<td>
@@ -545,10 +434,10 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30&deg;
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30&deg;
 					</p>
 					<p>
-						Knife rotation <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+						旋转 <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
 					</p>
 				</td>
 				<td>
@@ -560,10 +449,10 @@ previous: {url: toolbar.html, title: Tool Bar }
 			<tr>
 				<td>
 					<p>
-						Altitude <span style="color: rgb(0, 0, 0);">~</span> 30&deg;
+						高度 <span style="color: rgb(0, 0, 0);">~</span> 30&deg;
 					</p>
 					<p>
-						Knife rotation <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
+						旋转 <span style="color: rgb(0, 0, 0);">~</span> 90&deg;
 					</p>
 				</td>
 				<td>
@@ -576,148 +465,78 @@ previous: {url: toolbar.html, title: Tool Bar }
 	</table>
 	<p>&nbsp;</p>
 	<h3>
-		<a name="pickupgesture">Pick Up Gesture</a>
+		<a name="pickupgesture">模式选择手势</a>
 	</h3>
-	<p>In general, when we paint slowly, most of color will leave on
-		the surface. But some time, we need to pick up the color from painting
-		surface. Typically, it is the purpose of Palette. A gesture is
-		provided to meet this need. This gesture consists of the following
-		steps:</p>
+	<p>一般来说，当我们画的比较慢的时候，我们可以选取现有的颜料。但有时候，我们需要从一些已经画过的颜料表层去选择颜料，这也是我们增加调色板的主要目的。这里我们提供了一个手势来满足完成这个功能，这个手势包括以下步骤：</p>
 	<ol>
-		<li>Select a more thick color region</li>
-		<li>Press you knife hardly on paint surface</li>
-		<li>And then, rise it up very quickly</li>
+		<li>选取一个厚涂的区域</li>
+		<li>用画刀使劲的按下去</li>
+		<li>然后快速的抬起来</li>
 	</ol>
-	<p>It performs like a Tap. The most important is to leave the
-		surface as quickly as possible.</p>
-	<h3>
-		<a name="chamoisleathers">Chamois Leathers</a>
-	</h3>
-	<p>Chamois Leather is excellent when a soft finish is required. The
-		Chamois is an ideal tool for cleaning paper surfaces and dip pen nibs,
-		also offers protection when changing 'needle pointed' nibs.</p>
+	<p>就像点击屏幕一样，但是要尽可能快的拿起画刀</p>
 	<h2>
-		<a name="utilitytools">Utility Tools</a>
+		<a name="utilitytools">实用工具</a>
 	</h2>
+	<h3>蘸取颜料</h3>
+	<p>此工具用于在绘画过程中选择颜料，它能很好的模拟在实际创作中给画笔，画刀蘸取颜料的过程。</p>
+	<table>
+		<tbody>
+			<tr>
+				<th>画图工具</th>
+				<th>描述</th>
+			</tr>
+			<tr>
+				<td>颜料管</td>
+				<td>
+					<p>选择当前颜色的颜料管</p>
+					<p>颜料的多少与Apple Pencil的压力无关，默认是无限多的颜料。</p>
+				</td>
+			</tr>
+			<tr>
+				<td>画刀</td>
+				<td>
+					<p>给当前的画刀蘸取颜料</p>
+					<p>颜料蘸取的多少与Apple Pencil的压力相关，压力越大，蘸取的颜料越多。</p>
+				</td>
+			</tr>
+			<tr>
+				<td>画笔</td>
+				<td>
+					<p>给当前的画笔蘸取颜料</p>
+					<p>颜料蘸取的多少与Apple Pencil的压力相关，压力越大，蘸取的颜料越多。</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>当您使用颜色选择器时，当前的绘图工具将被禁用，它将在选择操作结束后启用。</p>
+	<p>所选的颜色是纯粹的颜色，没有3D显示引擎的光影影响。</p>
 	<h3>
-		<a name="colorfilling">Color Filling</a>
+		<a name="colorpatternpicker">模式选择</a>
 	</h3>
-	<p>
-		This tool is used to select a Color on painting support. It isn't a
-		really Painting tool. It simulates the action to fill <span>the
-			current painting tool with </span>Color such as Tube, Knife, Brush, etc.
-		This action is similar as you dip your painting tool in color liquid.
-	</p>
+	<p>该工具使用拾取手势选择一种颜色模式。当前的绘画工具在颜色模式拾取之前变干净。</p>
+
 	<table>
 		<tbody>
 			<tr>
-				<th>Drawing Tool</th>
-				<th>Description</th>
+				<th>画图工具</th>
+				<th>描述</th>
 			</tr>
 			<tr>
-				<td>Tube</td>
+				<td>画刀</td>
 				<td>
-					<p>Select a color of tube</p>
-					<p>
-						The <span>quantity of filling is independent of pressure <span>of
-								Apple Pencil when you click on Painting support or color icon.
-								It is maximum. </span></span>
-					</p>
+					<p>给当前的画刀选取一个颜色模式</p>
+					<p>颜色模式的质量和效果与Apple Pencil的压力相关。</p>
 				</td>
 			</tr>
 			<tr>
-				<td>Knife</td>
+				<td>画笔</td>
 				<td>
-					<p>Select a color and fill the current knife with this color
-						liquid.</p>
-					<p>The quantity of filling depends on the pressure of Apple
-						Pencil when you click on Painting support or color icon</p>
-				</td>
-			</tr>
-			<tr>
-				<td>Brush</td>
-				<td>
-					<p>
-						<span>Select a color and fill the current brush with this
-							color liquid.</span>
-					</p>
-					<p>
-						<span><span>The quantity of filling depends on the
-								pressure of Apple Pencil when you click on Painting support or
-								color icon</span></span>
-					</p>
+					<p>给当前的画笔选取一个颜色模式</p>
+					<p>颜色模式的质量和效果与Apple Pencil的压力相关。</p>
 				</td>
 			</tr>
 		</tbody>
 	</table>
-	<p>When you select the Color Picker, the current drawing tool gets
-		disabled. It will be enabled after the selection operation.</p>
-	<p>
-		The color selected is a pure color without any light and <span>shadow
-			influence by the 3D display engine</span>.
-	</p>
-	<h3>
-		<a name="colorpatternpicker">Color Pattern Picker</a>
-	</h3>
-	<p>This tool selects a color pattern using the Pickup Gesture. The
-		current painting tool gets clean before the color pattern pickup.</p>
-	<table>
-		<tbody>
-			<tr>
-				<th>Drawing Tool</th>
-				<th>Description</th>
-			</tr>
-			<tr>
-				<td>Knife</td>
-				<td>
-					<p>Select a color pattern for the current knife.</p>
-					<p>The quantity of filling depends on the pressure of Apple
-						Pencil when you click on Painting support.</p>
-				</td>
-			</tr>
-			<tr>
-				<td>Brush</td>
-				<td>
-					<p>Select a color pattern for the current brush.</p>
-					<p>The quantity of filling depends on the pressure of Apple
-						Pencil when you click on Painting support.</p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>
-		<span>Same as Color Filling, the color selected is a pure color
-			without any light and </span><span>shadow influence by the 3D display
-			engine</span><span>.</span>
-	</p>
-	<h2>
-		<a name="fluffymop">Fluffy Mop</a>
-	</h2>
-	<p>
-		<span style="color: rgb(37, 35, 35);"><span
-			style="color: rgb(37, 35, 35);">The tool can be used to
-				eradicate paintbrush marks, and smooth and little blur the liquid
-				surface. It doesn't touch the Wetness <span
-				style="color: rgb(37, 35, 35);">of color on Painting support</span>.
-		</span></span>
-	</p>
-	<table>
-		<tbody>
-			<tr>
-				<th style="text-align: center;">Before Fluffy Mop</th>
-				<th style="text-align: center;">After Fluffy Mop</th>
-			</tr>
-			<tr>
-				<td><img height="250" src="../../images/NormalEffect.jpg" /></td>
-				<td>
-					<p>
-						<img width="273" src="../../images/FluffyMopEffect.jpg" />
-					</p>
-					<p>&nbsp;</p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<p>&nbsp;</p>
+
 </body>
 </html>
