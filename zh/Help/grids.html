@@ -1,151 +1,142 @@
 --- 
 layout: cn 
-title: Grid, Guide Lines, Tracing and Reference
+title: 辅助工具
 category: User's Guide 
-next: {url: image_export_import.html, title: Image Export and Import}
-previous: {url: layer_management.html, title: Layer Management }
+next: {url: image_export_import.html, title: 图片导入导出}
+previous: {url: layer_management.html, title: 层管理 }
 ---
 <html>
 <body>
-	<p>This feature contains a list of assistance tools.</p>
+	<p>这些工具只是在我们创作的过程中用以辅助的，他们不论显示与否，都不会包含在我们的作品中。我们常用的辅助工具有以下几种：</p>
 	<ul>
-		<li><a href="#grid">Grid</a>
-			<p>Display grids on the top of the canvas.</p></li>
-		<li><a href="#guidelines">Guide Lines</a>
-			<p>Drawing some guide lines on the top of the canvas, but these
-				lines are not the real part of the artwork.</p></li>
-		<li><a href="#tracing">Tracing</a>
-			<p>Drawing the trace of a image.</p></li>
-		<li><a href="#reference">Reference</a>
-			<p>Open a image as reference while drawing.</p></li>
+		<li><a href="#grid">格子</a>
+			<p>在画板上显示格子，将画板分成大小相同的区域。</p></li>
+		<li><a href="#guidelines">标点线</a>
+			<p>在画板上画一些标点线，用来定位，标记等。</p></li>
+		<li><a href="#tracing">临摹</a>
+			<p>在画板底层插入一张图片，进而进行临摹等操作。</p></li>
+		<li><a href="#reference">参考</a>
+			<p>在画板上显示一张图片，以供参考。</p></li>
 	</ul>
 	<h2>
-		<a name="grid">Grid</a>
+		<a name="grid">格子</a>
 	</h2>
-	<p>Grid is a useful assistant tool for drawing, you can also custom
-		the size, color and line width. It will be displayed on the top of the
-		artwork and below the Guide Lines.</p>
+	<p>格子可以将画板分成大小相同的一些区域，以方便我们在创作过程中进行布局，格子的大小，线条的颜色等都可以自由的配置。</p>
 	<p>
-		The Grid can be show when you tap <img src="../../images/32/eye.png"
-			width="22" height="22" /> button.
+		默认情况下，格子是隐藏的，你可以通过点击<img src="../../images/32/eye.png" width="22"
+			height="22" />按钮来显示。
 	</p>
 	<ul>
-		<li>Line Color
-			<p>The color of the horizontal and vertical lines.</p>
+		<li>线条颜色
+			<p>设置格子的线条颜色。</p>
 		</li>
-		<li>Size
-			<p>The width between 2 vertical lines, and the height between 2
-				horizontal lines.</p>
+		<li>格子大小
+			<p>设置格子的大小，宽度和高度会始终保持一致。</p>
 		</li>
-		<li>Line width
-			<p>The width of the lines.</p>
+		<li>线条宽度
+			<p>设置格子线条的宽度。</p>
 		</li>
 	</ul>
 	<h2>
-		<a name="guidelines">Guide Lines</a>
+		<a name="guidelines">标点线</a>
 	</h2>
-	<p>Guide Lines is another kind of assistant tool for drawing, it
-		likes to make marks on artwork, you can draw some lines or dot to help
-		you while drawing.</p>
-	<p>The Guide Lines will be displayed at the very top of the
-		artwork.</p>
+	<p>标点线是用来标记某些重要区域或绘制草图等所绘制的一些特殊的线条或标点，你可以通过Apple Pencil或手指来画它。</p>
+	<p>标点线会显示在画板的最上层，但是前面已经提过，所有的辅助线包括标点线，都不会出现在最终的作品中。</p>
 	<p>
-		The Guide Lines can be show when you tap <img
-			src="../../images/32/eye.png" width="22" height="22" /> button.
+		默认情况下，标点线是隐藏的，你可以通过点击<img src="../../images/32/eye.png" width="22"
+			height="22" />按钮来显示它。
 	</p>
 	<p>
-		You need to enable drawing guide lines manually by tap <img
-			src="../../images/32/guide-lines-drawing.png" width="22" height="22" />
-		button.
+		标点线的绘制功能也是需要你手动的打开的，如果你想绘制标点线，你必须先点击<img
+			src="../../images/32/guide-lines-drawing.png" width="22" height="22" />按钮。
+		因为，我们在画板上创作也会用到Apple Pencil，如果我们在绘画的过程中需要参考标点线，我们的画笔可能会冲突。
 	</p>
 	<ul>
 		<li><img src="../../images/32/undo.png" width="22" height="22" />
-			<p>Undraw last guide line.</p></li>
+			<p>撤销上一次的标点线。</p></li>
 		<li><img src="../../images/32/redo.png" width="22" height="22" />
-			<p>Redraw last guide line.</p></li>
+			<p>重做撤销的标点线。</p></li>
 		<li><img src="../../images/32/artworkClean.png" width="22"
 			height="22" />
-			<p>Clean all guide lines.</p></li>
+			<p>擦除所有的标点线。</p></li>
 	</ul>
 	<h2>
-		<a name="tracing">Tracing</a>
+		<a name="tracing">临摹</a>
 	</h2>
-	<p>Tracing is a assistant tool of copying the image. Sometimes, you
-		may want to drawing something like an existing image, you can just use
-		this tool.</p>
+	<p>临摹对于画画的学习来说当然是意义非凡，我们的临摹工具也是一样，将一张图片插入到画板的最底层，然后开始临摹。</p>
 	<p>
-		Tracing is not same as the <a href="image_export_import.html">Import
-			Image to artwork</a>, the image of tracing is not part of the artwork, it
-		only insert an image temporary under the artwork, once the drawing is finished,
-		it can be removed.
+		临摹和<a href="image_export_import.html">图片导入导出</a>中的图片导入有很大的区别，临摹的图片是临时的，它不会包含在最终的作品中，一旦临摹完毕，你可以将这张图片轻易的删除。而你一旦将图片导入到作品中，这张图片就会一直存在在你的作品中。
 	</p>
-	<p>The image of tracing can be managed in following ways:</p>
+	<p>关于临摹中的图片，有以下这些功能用于管理：</p>
 	<ul>
 		<li><img src="../../images/32/add.png" width="22" height="22" />
-			<p>Select an image:</p>
+			<p>选择图片：</p>
 			<ul>
-				<li>From Files</li>
-				<li>From Photo Library</li>
-				<li>From Camera(take a new photo)</li>
+				<li>从<strong>文件</strong>中选择
+				</li>
+				<li>从<strong>相册</strong>中选择
+				</li>
+				<li>从<strong>相机</strong>中选择，即新拍一张照片。
+				</li>
 			</ul></li>
-		<li><img src="../../images/32/edit-image.png" width="22" height="22" />
-			<p>Edit the image with Image Editor.</p>
+		<li><img src="../../images/32/edit-image.png" width="22"
+			height="22" />
+			<p>
+				使用图片编辑器来编辑图片（关于图片编辑器，可以查看<a href="image_export_import.html">图片导入导出</a>）
+			</p>
 		<li><img src="../../images/32/shrink.png" width="22" height="22" />
-			<p>Crop the artwork with current image of tracing.</p>
+			<p>将画板剪切成图片大小。</p>
 		<li><img src="../../images/32/lock1.png" width="22" height="22" />
-			<p>Lock current image of tracing, the image will not allowed to
-				changed.</p>
+			<p>将当前的临摹图片锁定，不能更改。</p>
 		<li><img src="../../images/32/remove.png" width="22" height="22" />
-			<p>Remove current image of tracing.</p>
+			<p>删除当前的临摹图片。</p>
 	</ul>
-	<p>Once the image is set, you can align it related on the artwork:</p>
+	<p>对齐</p>
 	<ul>
-		<li><img src="../../images/32/align-left.png" width="22" height="22" />
-			<p>Align left.</p></li>
+		<li><img src="../../images/32/align-left.png" width="22"
+			height="22" />
+			<p>左对齐</p></li>
 		<li><img src="../../images/32/align-right.png" width="22"
 			height="22" />
-			<p>Align right.</p></li>
-		<li><img src="../../images/32/align-top.png" width="22" height="22" />
-			<p>Align top.</p></li>
+			<p>右对齐</p></li>
+		<li><img src="../../images/32/align-top.png" width="22"
+			height="22" />
+			<p>上对齐</p></li>
 		<li><img src="../../images/32/align-center.png" width="22"
 			height="22" />
-			<p>Align center.</p></li>
+			<p>居中对齐</p></li>
 		<li><img src="../../images/32/align-bottom.png" width="22"
 			height="22" />
-			<p>Align bottom.</p></li>
+			<p>下对齐</p></li>
 	</ul>
-	<p>You can also change the rotation and fill method of image:</p>
+	<p>旋转和填充</p>
 	<ul>
-		<li><img src="../../images/32/scale-fill.png" width="22" height="22" />
-			<p>Scale to full fill the artwork, the ratio of image will be
-				changed to same one as the artwork .</p></li>
-		<li><img src="../../images/32/scale-fit.png" width="22" height="22" />
-			<p>Scale to fit the artwork, this will keep the original ratio of
-				image.</p></li>
+		<li><img src="../../images/32/scale-fill.png" width="22"
+			height="22" />
+			<p>根据画板的大小，将图片拉伸进行填充，图片的比例会被改变。</p></li>
+		<li><img src="../../images/32/scale-fit.png" width="22"
+			height="22" />
+			<p>根据画板的大小，将图片放大进行填充，图片会保持原始比例。</p></li>
 		<li><img src="../../images/32/rotate-left.png" width="22"
 			height="22" />
-			<p>Rotate left 90 degree.</p></li>
+			<p>向左旋转90度。</p></li>
 		<li><img src="../../images/32/rotate-right.png" width="22"
 			height="22" />
-			<p>Rotate right 90 degree.</p></li>
+			<p>向右旋转90度。</p></li>
 		<li><img src="../../images/32/sync.png" width="22" height="22" />
-			<p>Reset the image to original and located at the center of
-				artwork.</p></li>
+			<p>将图片重置，恢复原始比例，居中显示。</p></li>
 	</ul>
-	<p>The most important thing is the <span>Focus Visibility</span>, please check
-	  this from <a href="settings.html">Settings</a>. It used to control the alpha value of multiple
-	  layers. If this value is tool high, the image of tracing should be
-	  covered.</p>
-	<h2>
-	  <a name="reference">Reference</a>
-	</h2>
-	<p>The Reference is like Tracing, it also needs an image. But the
-		Reference is more easier, it just to pin the image at the top of
-		artwork as reference.</p>
-	<p>The Reference can be zoomed and moved by 2 fingers pinches.</p>
 	<p>
-		Both the Tracing and Reference can be show when you tap <img
-			src="../../images/32/eye.png" width="22" height="22" /> button.
+		重要提示：<span>关注可视度</span>可能会影响临摹图片的显示，请参考<a href="settings.html">设置</a>中对此的解释，<span>关注可视度</span>是用来对多层的分层显示，如果这个值设置的过大，所有的层的透明度会很低，从而导致临摹图片不可见，所以要特别注意。
+	</p>
+	<h2>
+		<a name="reference">参考</a>
+	</h2>
+	<p>参考和临摹一样，都是基于已有的图片，参考的方式更简单一点，将图片放置在画板的上方，方便在绘画时参考。</p>
+	<p>参考的图片能用捏合手势缩放和移动。</p>
+	<p>
+		参考和临摹一样，默认情况下都是隐藏的，你需要点击<img src="../../images/32/eye.png" width="22"
+			height="22" />按钮来显示他们。
 	</p>
 </body>
 </html>
