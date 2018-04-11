@@ -1,0 +1,250 @@
+--- 
+layout: fr 
+title: Color Management
+category: User's Guide 
+previous: {url: simulation.html, title: Oil Painting Simulation}
+next: {url: gallery.html, title: Gallery }
+---
+<html>
+<body>
+	<p>The application simulates the nature painting processes. Color
+		blending is a primary feature for a painting solution. Of course, we
+		support it. Furthermore, we simulates the real color process in the
+		Painting process. We target to provide the following advanced features</p>
+	<ul style="list-style-type: square;">
+		<li>Color System</li>
+		<li>Color Transfer Process</li>
+		<li>Color Pattern</li>
+	</ul>
+	<h2>Color System</h2>
+	<p>
+		<span style="color: rgb(0, 0, 0);">Traditional software works
+			with color in ways that are faithful to the way machines display
+			color, which is<span style="color: rgb(36, 39, 41);"> based on
+				light&nbsp;</span><em>emission</em><span style="color: rgb(36, 39, 41);">.
+				The colour of dyes and pigments is based on light&nbsp;</span><em>absorption</em><span
+			style="color: rgb(36, 39, 41);">. </span>
+		</span><span style="color: rgb(0, 0, 0);">The blend of light emission
+			is different to the one of light absorption for some colors. For
+			example, with light emission, Yellow blended with Blue produces Gray.
+			But it is Green in Light absorption. Therefore, u</span><span
+			style="color: rgb(0, 0, 0);">se of light emission system for
+			Painting not only unintuitive to users, but also gives a wrong result
+			in gradient.</span>
+	</p>
+	<table width="90%" style="table-layout:fixed;">
+		<tbody>
+			<tr>
+				<th colspan="1">&nbsp;</th>
+				<th style="text-align: center;">Light Emission</th>
+				<th style="text-align: center;">Light Absorption</th>
+			</tr>
+			<tr>
+				<th colspan="1"><span>Gradient: </span>Red to Yellow</th>
+				<td><img width="254" src="../../images/RedYellow_Add.jpg" /></td>
+				<td><img align="center" width="280"
+					src="../../images/RedYellow.jpg" /></td>
+			</tr>
+			<tr>
+				<th colspan="1"><span>Gradient: </span>Blue to Yellow</th>
+				<td><img align="center" width="259"
+					src="../../images/BlueYellow_Add.jpg" /></td>
+				<td><img align="center" width="280"
+					src="../../images/BlueYellow.jpg" /></td>
+			</tr>
+			<tr>
+				<th colspan="1">Gradient: Red to Blue</th>
+				<td><img align="center" width="255"
+					src="../../images/RedBlue_Add.jpg" /></td>
+				<td><img align="center" width="280" src="../../images/RedBlue.jpg" /></td>
+			</tr>
+			<tr>
+				<th colspan="1">Color Wheel</th>
+				<td colspan="1"><img height="250"
+					src="../../images/ColorWheel_Add.jpg" /></td>
+				<td colspan="1"><img align="center" height="250"
+					src="../../images/ColorWheel.jpg" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<span style="color: rgb(0, 0, 0);">The gradient from Red to
+			Yellow and from Red to Purple can be produced using Light emission
+			blending. But only Light absorption blending can blend the gradient
+			from Blue to Yellow for Green, and Black from Red, Blue and Yellow.
+			And more general speaking, the blending in Light emission tends to
+			White, and <span style="color: rgb(0, 0, 0);">the blending in
+				Light absorption tends to Black.</span>
+		</span>
+	</p>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(0, 0, 0);"><br /></span></span>
+	</p>
+	<table width="90%" style="table-layout:fixed;">
+		<tbody>
+			<tr>
+				<th>&nbsp;</th>
+				<th style="text-align: center;">Our Simulation</th>
+				<th style="text-align: center;">Real Oil Blending</th>
+			</tr>
+			<tr>
+				<th><span>Gradient: </span><span>Blue to Yellow</span></th>
+				<td><img align="center" width="330"
+					src="../../images/BlueYellow.jpg" /></td>
+				<td>
+					<p>
+						<img height="250" src="../../images/Real_BlueYellow_Green.PNG" />
+					</p>
+					<p>
+						<iframe width="350"
+							src="https://www.youtube.com/embed/NYwvCbaGzKc?rel=0"
+							frameborder="0" allowfullscreen></iframe>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<th><span>Gradient: Red to Blue</span></th>
+				<td><img align="center" width="336" src="../../images/RedBlue.jpg" /></td>
+				<td>
+					<p>
+						<img width="350" src="../../images/Real_RedBlue_Purple.PNG" />
+					</p>
+					<p>
+						<iframe width="350"
+							src="https://www.youtube.com/embed/jsJRL1JukDU?rel=0"
+							frameborder="0" allowfullscreen></iframe>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<th><span>Gradient: </span><span>Red to Yellow</span></th>
+				<td><img align="center" width="300"
+					src="../../images/RedYellow.jpg" /></td>
+				<td>
+					<p>
+						<img width="326" src="../../images/Real_RedYellow_Orange.PNG" />
+					</p>
+					<p>
+						<iframe width="350"
+							src="https://www.youtube.com/embed/vXBf_puKt_c?rel=0"
+							frameborder="0" allowfullscreen></iframe>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="1">Color Wheel</th>
+				<td colspan="1"><img align="center" height="250"
+					src="../../images/ColorWheel.jpg" /></td>
+				<td colspan="1">
+					<p>
+						<img src="../../images/Real_ColorWheel.PNG" />
+					</p>
+					<p>
+						<iframe width="350"
+							src="https://www.youtube.com/embed/ZoezvYh2_pY?rel=0"
+							frameborder="0" allowfullscreen></iframe>
+					</p>
+					<p>&nbsp;</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(0, 0, 0);"><br /></span></span>
+	</p>
+	<p>
+		<span style="color: rgb(0, 0, 0);"><span
+			style="color: rgb(0, 0, 0);"><span
+				style="color: rgb(0, 0, 0);">Our application uses the system
+					of Light Absorption, the primitive colors are Red, Yellow and Blue.
+					So you can blend colors in the same way as real Oil Painting with a
+					Limited Palette. </span></span></span>
+	</p>
+	<h2>Color Transfer process</h2>
+	<p>Our Painting Tools like Knife and Brush are a Color carrier. It
+		can take some color from one location on Painting Support and put to
+		another location. All properties are kept during the transfer such as
+		quantity and density.</p>
+	<h2>Color Pattern</h2>
+	<p>During the painting, some Painting Tools like Knife and Brush
+		collects different colors in different locations. It forms a Color
+		Pattern.</p>
+	<table width="90%" style="table-layout:fixed;">
+		<tbody>
+			<tr>
+				<th colspan="1">Description</th>
+				<th>Screen Shot</th>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<p>The creation of Color Pattern</p>
+					<ol>
+						<li>Prepare some colors on any Painting surface</li>
+						<li>Take a Painting Tool</li>
+						<li>Pick up the colors using Pick up Gesture&nbsp;<br />(Tapping
+							on the surface quickly with maximum of pressure)
+						</li>
+					</ol>
+					<p>Pattern is kept in the Painting tool, it can be saved in
+						Application</p>
+				</td>
+				<td><img width="200" src="../../images/ColorPattern_01.jpg" /></td>
+			</tr>
+			<tr>
+				<td colspan="1">Dot Stroke with Color Pattern</td>
+				<td>
+					<p>
+						<img width="253" src="../../images/ColorPattern_02.jpg" />
+					</p>
+					<p>&nbsp;</p> <img width="250" src="../../images/ColorPattern_03.jpg" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1">Different Painting strokes with the same Color
+					Pattern</td>
+				<td colspan="1">
+					<p>
+						<img height="250" src="../../images/ColorPattern_04.jpg" />
+					</p> <img height="250" src="../../images/ColorPattern_05.jpg" />
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<span
+			style="color: rgb(0, 0, 0); font-size: 16.0px; font-weight: bold;">&nbsp;</span>A
+		Color Pattern can be saved in two ways:
+	</p>
+	<p>
+		<span
+			style="color: rgb(0, 0, 0); font-size: 16.0px; font-weight: bold;">&nbsp;</span>
+	</p>
+	<table width="90%" style="table-layout:fixed;">
+		<tbody>
+			<tr>
+				<th>Color Pattern Management</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>
+					<p>Stored In the current Artwork</p>
+				</td>
+				<td>It is a Color Pattern associeted with this Painting Tool.
+					It can be reused with the option Auto Reset.</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Stored In the Application</p>
+				</td>
+				<td>A separated Painting Tool will be created.</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<span
+			style="color: rgb(0, 0, 0); font-size: 16.0px; font-weight: bold;"><br /></span>
+	</p>
+</body>
+</html>

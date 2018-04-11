@@ -1,0 +1,72 @@
+--- 
+layout: fr
+title: Oil Painting Simulation 
+category: User's Guide 
+previous: {url: prerequisites.html, title: Prerequisites}
+next: {url: color_management.html, title: Color Management }
+---
+<html>
+<body>
+	<p>The goal of this application is to simulate as closely as
+		possible to the real Oil Painting. Precisely, the simulation consists
+		of the following aspects:</p>
+	<ol>
+		<li>Painting Process</li>
+		<li>Painting Tools</li>
+		<li>Color Management</li>
+		<li>Liquid</li>
+		<li>Painting Surface</li>
+	</ol>
+	<h2>Painting Process</h2>
+	<p>
+		This application simulates as closely as possible to the real Painting
+		approach. It provides not only a Palette for Color preparation, but
+		also a capability to produce painting strokes very hard to repeat.
+		Under the same conditions, all strokes made by users are very similar,
+		but never the same. They aren't closed <span>mechanically.</span>
+	</p>
+	<h2>Painting Tool</h2>
+	<p>Most of Oil Painting tools are supported such as Brush, Knife
+	  and Fluffy Mop. Please read <a href="painting_tools.html">here</a> to get more details.</p>
+	<h2>Color Management</h2>
+	<p>Color is very important in Oil Painting, this application simulates the real color process in the
+	  Painting process. Please read <a href="color_management.html">here</a> to get more details.</p>
+	<h2>Liquid</h2>
+	<p>In the real physic world, the density of Color plays an
+		important role on Painting. It influences the thickness of layer and
+		capability of color spreading and blending. More density of liquid can
+		produce easier the effect Impasto, and thinner liquid can give an
+		effect of water or cloud.</p>
+	<p>This application simulates the medium like Turpentine. In the
+		real Oil Painting, Turpentine is a thinner, it will make the painting
+		look more like water-color, depending on the quantities and it makes
+		it opaque.</p>
+	<p>
+		The <span>simulation of </span>Color Liquid consists of a Color
+		management in two states: Dried and Wet. Color Liquid in Dried is in
+		fact a liquid anymore, it is a solid state. It doesn't participate the
+		color <span>blending</span> in painting. However, <span>Color
+			Liquid in Wet is managed by a property named as Wetness, which is
+			used to control the density of Color Liquid. A Wet Color can become
+			Dried via a tool Dryer, which shows d<span>ryness state of
+				entier Artwork in a dedicated view.</span> But the Dried liquid can never
+			come back to Wet. The Wetness is controlled by the tools Turpentine,
+			Fluffy Mop and Wetter. The last shows Wetness of entier Artwork in a
+			<span>dedicated</span> view.
+		</span>
+	</p>
+	<p>The simulation of Wetness consumes a lot of iPad processors.
+		With a important value of Wetness, the response time of Apple Pencil
+		will be impacted. In worst time, it increases by a factor of 2. But it
+		is still acceptable.</p>
+	<h2>Painting Surface</h2>
+	<p>Painting Surface is a medium support, where you produce your
+		Artwork. The difference of texture of medium support may influence
+		Strokes when the layer is thin. Our application supports a lot of
+		supports with different fabric texture and degree of rough.</p>
+	<p>
+		Please see <a href="new_paintings.html">this</a> documentation to get
+		more details.
+	</p>
+</body>
+</html>

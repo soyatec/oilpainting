@@ -1,211 +1,37 @@
 --- 
 layout: fr 
 title: Overview 
+next: {url: prerequisites.html, title: Prerequisites}
+previous: {url: ../, title: Home}
 ---
 <html>
 <body>
-<p>This application (Atelier, 画坊) is a world-wide first professional 3D oil painting simulation. It simulates closely the nature oil painting process and tools using in 3D technology. It gives you <span>a huge set of powerful capabilities in </span>a very simple application. In summary, here is the highlight of the available key features:</p>
-<ul>
-<li>Nature Painting Process</li>
-<li>Paint Color system</li>
-<li>3D realist simulation of Painting tool such as Brushes and Knifes (<span>Impasto and <span>Sgraffito</span></span>)</li>
-<li>Support different kinds of Painting surfaces</li>
-<li>Stroke in multiple colors with a powerful Color Pattern management</li>
-<li>Dry and Wet liquid support</li>
-<li>Possible to change the light environment after-hands for different effect</li>
-<li>Replay or export the entire painting process</li>
-<li>Undo/Redo and possible to go back to any point in History timeline</li></ul>
-<p>This application can be used both for Beginners and Expert Artists. For beginners, it is a very valuable solution to master each tools of Oil Painting and train the painting process. For Expert Artist, it is very useful solution to make some quick sketches.</p>
-<h2>Prerequisites</h2>
-<p>To use this application, you need to have an iPad Pro 12.7 or IPad pro 9.7 with an Apple Pencil.</p>
-<h2>Apple Pencil</h2>
-<p><span style="color: rgb(0,0,0);">When you&rsquo;re working with Apple Pencil, you can orientate it in three dimensions. Up and down direction is called&nbsp;</span><strong>altitude</strong><span style="color: rgb(0,0,0);">, while side-to-side is called&nbsp;</span><strong>azimuth</strong><span style="color: rgb(0,0,0);">:</span></p>
-<p><span style="color: rgb(0,0,0)"><img src="../images/ApplePencil.png"/></span></p>
-<h2>Oil Painting Simulation</span></h2>
-<p>The goal of this application is to simulate as closely as possible to the real Oil Painting. Precisely, the simulation consists of the following aspects:</p>
-<ol>
-<li>Painting Process</li>
-<li>Painting Tools</li>
-<li>Color Management</li>
-<li>Liquid</li>
-<li>Painting Support</li></ol>
-<h3>Painting Process</h3>
-<p>This application simulates as closely as possible to the real Painting approach. It provides not only a Palette for Color preparation, but also a capability to produce painting strokes very hard to repeat. Under the same conditions, all strokes made by users are very similar, but never the same. They aren't closed <span>mechanically.</span></p>
-<h3>Painting Tool</h3>
-<p><span style="color: rgb(0,0,0);">Most of Oil Painting tools are supported such as Brush, Knife and Fluffy Mop. </span></p>
-<h3>Color Management</h3>
-<p>The application simulates the nature painting processes. Color blending is a primary feature for a painting solution. Of course, we support it. Furthermore, we simulates the real color process in the Painting process. We target to provide the following advanced features</p>
-<ul style="list-style-type: square;">
-<li>Color System</li>
-<li>Color Transfer Process</li>
-<li>Color Pattern</li></ul>
-<h4>Color System</h4>
-<p><span style="color: rgb(0,0,0);">Traditional software works with color in ways that are faithful to the way machines display color, which is<span style="color: rgb(36,39,41);"> based on light&nbsp;</span><em>emission</em><span style="color: rgb(36,39,41);">. The colour of dyes and pigments is based on light&nbsp;</span><em>absorption</em><span style="color: rgb(36,39,41);">. </span></span><span style="color: rgb(0,0,0);">The blend of light emission is different to the one of light absorption for some colors. For example, with light emission, Yellow blended with Blue produces Gray. But it is Green in Light absorption. Therefore, u</span><span style="color: rgb(0,0,0);">se of light emission system for Painting not only unintuitive to users, but also gives a wrong result in gradient.</span></p>
-<table>
-<tbody>
-<tr>
-<th colspan="1">&nbsp;</th>
-<th style="text-align: center;">Light Emission</th>
-<th style="text-align: center;">Light Absorption</th></tr>
-<tr>
-<th colspan="1"><span>Gradient: </span>Red to Yellow</th>
-<td><img width="254" src="../images/RedYellow_Add.jpg" /></td>
-<td><img align="center"  width="280" src="../images/RedYellow.jpg" /></td></tr>
-<tr>
-<th colspan="1"><span>Gradient: </span>Blue to Yellow</th>
-<td><img align="center"  width="259" src = "../images/BlueYellow_Add.jpg" /></td>
-<td><img align="center"  width="280" src = "../images/BlueYellow.jpg" /></td></tr>
-<tr>
-<th colspan="1">Gradient: Red to Blue</th>
-<td><img align="center"  width="255" src = "../images/RedBlue_Add.jpg" /></td>
-<td><img align="center"  width="280" src = "../images/RedBlue.jpg" /></td></tr>
-<tr>
-<th colspan="1">Color Wheel</th>
-<td colspan="1"><img height="250"  src = "../images/ColorWheel_Add.jpg" /></td>
-<td colspan="1"><img align="center" height="250"  src = "../images/ColorWheel.jpg" /></td></tr></tbody></table>
-<p><span style="color: rgb(0,0,0);">The gradient from Red to Yellow and from Red to Purple can be produced using Light emission blending. But only Light absorption blending can blend the gradient from Blue to Yellow for Green, and Black from Red, Blue and Yellow. And more general speaking, the blending in Light emission tends to White, and <span style="color: rgb(0,0,0);">the blending in Light absorption tends to Black.</span></span></p>
-<p><span style="color: rgb(0,0,0);"><span style="color: rgb(0,0,0);"><br /></span></span></p>
-<table>
-<tbody>
-<tr>
-<th>&nbsp;</th>
-<th style="text-align: center;">Our Simulation</th>
-<th style="text-align: center;">Real Oil Blending</th></tr>
-<tr>
-<th><span>Gradient: </span><span>Blue to Yellow</span></th>
-<td><img align="center" width="330" src = "../images/BlueYellow.jpg" /></td>
-<td>
-<p><img height="250" src = "../images/Real_BlueYellow_Green.PNG" /></p>
-<p><iframe width="350" src="https://www.youtube.com/embed/NYwvCbaGzKc?rel=0" frameborder="0" allowfullscreen></iframe></p></td></tr>
-<tr>
-<th><span>Gradient: Red to Blue</span></th>
-<td><img align="center" width="336" src = "../images/RedBlue.jpg" /></td>
-<td>
-<p><img width="350" src = "../images/Real_RedBlue_Purple.PNG" /></p>
-<p><iframe width="350" src="https://www.youtube.com/embed/jsJRL1JukDU?rel=0" frameborder="0" allowfullscreen></iframe></p></td></tr>
-<tr>
-<th><span>Gradient: </span><span>Red to Yellow</span></th>
-<td><img align="center"  width="300" src = "../images/RedYellow.jpg" /></td>
-<td>
-<p><img width="326" src = "../images/Real_RedYellow_Orange.PNG" /></p>
-<p><iframe width= "350" src="https://www.youtube.com/embed/vXBf_puKt_c?rel=0" frameborder="0" allowfullscreen></iframe></p></td></tr>
-<tr>
-<th colspan="1">Color Wheel</th>
-<td colspan="1"><img align="center" height="250"  src = "../images/ColorWheel.jpg" /></td>
-<td colspan="1">
-<p><img src = "../images/Real_ColorWheel.PNG" /></p>
-<p><iframe width="350" src="https://www.youtube.com/embed/ZoezvYh2_pY?rel=0" frameborder="0" allowfullscreen></iframe></p>
-<p>&nbsp;</p></td></tr></tbody></table>
-<p><span style="color: rgb(0,0,0);"><span style="color: rgb(0,0,0);"><br /></span></span></p>
-<p><span style="color: rgb(0,0,0);"><span style="color: rgb(0,0,0);"><span style="color: rgb(0,0,0);">Our application uses the system of Light Absorption, the primitive colors are Red, Yellow and Blue. So you can blend colors in the same way as real Oil Painting with a Limited Palette. </span></span></span></p>
-<h4>Color Transfer process</h4>
-<p>Our Painting Tools like Knife and Brush are a Color carrier. It can take some color from one location on Painting Support and put to another location. All properties are kept during the transfer such as quantity and density.</p>
-<h4>Color Pattern</h4>
-<p>During the painting, some Painting Tools like Knife and Brush collects different colors in different locations. It forms a Color Pattern.</p>
-<table>
-<tbody>
-<tr>
-<th colspan="1">Description</th>
-<th>Screen Shot</th></tr>
-<tr>
-<td colspan="1">
-<p>The creation of Color Pattern</p>
-<ol>
-<li>Prepare some colors on any Painting surface</li>
-<li>Take a Painting Tool</li>
-<li>Pick up the colors using Pick up Gesture&nbsp;<br />(Tapping on the surface quickly with maximum of pressure)</li></ol>
-<p>Pattern is kept in the Painting tool, it can be saved in Application</p></td>
-<td><img  width="200" src = "../images/ColorPattern_01.jpg" /></td></tr>
-<tr>
-<td colspan="1">Dot Stroke with Color Pattern</td>
-<td>
-<p><img  width="253" src = "../images/ColorPattern_02.jpg" /></p>
-<p>&nbsp;</p><img  width="250" src = "../images/ColorPattern_03.jpg" /></td></tr>
-<tr>
-<td colspan="1">Different Painting strokes with the same Color Pattern</td>
-<td colspan="1">
-<p><img height="250"  src = "../images/ColorPattern_04.jpg" /></p><img height="250" src = "../images/ColorPattern_05.jpg" /></td></tr></tbody></table>
-<p><span style="color: rgb(0,0,0);font-size: 16.0px;font-weight: bold;">&nbsp;</span>A Color Pattern can be saved in two ways:</p>
-<p><span style="color: rgb(0,0,0);font-size: 16.0px;font-weight: bold;">&nbsp;</span></p>
-<table>
-<tbody>
-<tr>
-<th>Color Pattern Management</th>
-<th>Description</th></tr>
-<tr>
-<td>
-<p>Stored In the current Artwork</p></td>
-<td>It is a Color Pattern associeted with this Painting Tool. It can be reused with the option Auto Reset.</td></tr>
-<tr>
-<td>
-<p>Stored In the Application</p></td>
-<td>A separated Painting Tool will be created.</td></tr></tbody></table>
-<p><span style="color: rgb(0,0,0);font-size: 16.0px;font-weight: bold;"><br /></span></p>
-<h3>Liquid</h3>
-<p>In the real physic world, the density of Color plays an important role on Painting. It influences the thickness of layer and capability of color spreading and blending. More density of liquid can produce easier the effect Impasto, and thinner liquid can give an effect of water or cloud.</p>
-<p>This application simulates the medium like Turpentine. In the real Oil Painting, Turpentine is a thinner, it will make the painting look more like water-color, depending on the quantities and it makes it opaque.</p>
-<p>The <span>simulation of </span>Color Liquid consists of a Color management in two states: Dried and Wet. Color Liquid in Dried is in fact a liquid anymore, it is a solid state. It doesn't participate the color <span>blending</span> in painting. However, <span>Color Liquid in Wet is managed by a property named as Wetness, which is used to control the density of Color Liquid. A Wet Color can become Dried via a tool Dryer, which shows d<span>ryness state of entier Artwork in a dedicated view.</span> But the Dried liquid can never come back to Wet. The Wetness is controlled by the tools Turpentine, Fluffy Mop and Wetter. The last shows Wetness of entier Artwork in a <span>dedicated</span> view. </span></p>
-<p>The simulation of Wetness consumes a lot of iPad processors. With a important value of Wetness, the response time of Apple Pencil will be impacted. In worst time, it increases by a factor of 2. But it is still acceptable.</p>
-<h3>Painting Surface</h3>
-<p><span><span>Painting Surface is a medium support, where you produce your Artwork. The difference of texture of medium support may influence Strokes when the layer is thin. Our application supports a lot of supports with different fabric texture and degree of rough. </span></span></p>
-<h2>Setting</h2>
-<table>
-<tbody>
-<tr>
-<th>Item</th>
-<th>Description</th>
-<th colspan="1">Default Value</th></tr>
-<tr>
-<td>Left and Right Hand</td>
-<td>Panel Layers for Right or Left hands</td>
-<td colspan="1">Right hand</td></tr>
-<tr>
-<td><span>Tool Panels timeout</span></td>
-<td>The time out to display the tool bars and views after each stroke, The purpose of this parameter is to prevent any collision of painting touch with tool selection during the repeated Painting.</td>
-<td colspan="1">1.0 second</td></tr>
-<tr>
-<td colspan="1">Enable state of Tool panels timeout</td>
-<td colspan="1">The timeout can be disabled.</td>
-<td colspan="1">true</td></tr>
-<tr>
-<td colspan="1">Error Silence</td>
-<td colspan="1">Sound for an error or alert</td>
-<td colspan="1">false</td></tr>
-<tr>
-<td colspan="1">Save Interval time</td>
-<td colspan="1"><span>The interval time to save the artwork</span></td>
-<td colspan="1">1 minuite</td></tr>
-<tr>
-<td colspan="1">Auto Save</td>
-<td colspan="1">Enable/Disable the automatic save of <span>the artwork</span></td>
-<td colspan="1">true</td></tr>
-<tr>
-<td colspan="1">Sensibility</td>
-<td colspan="1">It controls the sensibility of pressure of Apple Pencil. When it is 1.0, it uses directly the pressure of <span>Apple Pencil. When it is 2.0, only 0.0 - 0.5 of device pressure will be used for Painting. The value could be from 1.0 to 5.0.</span></td>
-<td colspan="1">2.5</td></tr></tbody></table>
-<p>&nbsp;</p>
-<h2>Sharing, Import &amp; Export</h2>
-<p>A Painting can be imported and exported in two formats:</p>
-<ol>
-<li>Public well-known Images such as png</li>
-<li>Atelier file, which contains <span>all information of Painting such as Tools, wet state, thickness, etc.</span></li></ol>
-<h3><span>Image</span></h3>
-<p>The purpose of image format support is to communicate with other applications.</p>
-<p>The import of image file be done in two ways</p>
-<ol>
-<li>Inside of Workshop</li>
-<li>Outside of Atelier, for example in Photo Gallery of IPad</li></ol>
-<p>From outside of Atelier such as Photo <span>Gallery of IPad</span>, you can select an image and then creates a new Painting in the same size of imported image and imports the image. In fact, this import consists of two steps:</p>
-<ol>
-<li>Create a temporary file in a shared folder</li>
-<li>Create an Painting inside of Atelier, which can occurs on the startup or in the Gallery when you scroll down.</li></ol>
-<p>The export can be done only inside of Workshop</p>
-<p>Sharing deals with only image files.</p>
-<h3>Atelier file</h3>
-<p>The purpose of his file is to exchange paintings between IPad and for backup/restore.</p>
-<p>The export can be done only inside of Gallery. A<span>ll exported files are saved in Sharing Folder of our App. A Folder is created per Group. These files are accessible via <span>ITures.</span></span></p>
-<p><span>&nbsp;</span>You may need to clean up from time to time in the Setting panel of Atelier.</p>
-
-
+	<p>
+		This application (Atelier, 画坊) is a world-wide first professional 3D
+		oil painting simulation. It simulates closely the nature oil painting
+		process and tools using in 3D technology. It gives you <span>a
+			huge set of powerful capabilities in </span>a very simple application. In
+		summary, here is the highlight of the available key features:
+	</p>
+	<ul>
+		<li>Nature Painting Process</li>
+		<li>Paint Color system</li>
+		<li>3D realist simulation of Painting tool such as Brushes and
+			Knifes (<span>Impasto and <span>Sgraffito</span></span>)
+		</li>
+		<li>Support different kinds of Painting surfaces</li>
+		<li>Stroke in multiple colors with a powerful Color Pattern
+			management</li>
+		<li>Dry and Wet liquid support</li>
+		<li>Possible to change the light environment after-hands for
+			different effect</li>
+		<li>Replay or export the entire painting process</li>
+		<li>Undo/Redo and possible to go back to any point in History
+			timeline</li>
+	</ul>
+	<p>This application can be used both for Beginners and Expert
+		Artists. For beginners, it is a very valuable solution to master each
+		tools of Oil Painting and train the painting process. For Expert
+		Artist, it is very useful solution to make some quick sketches.</p>
 </body>
 </html>
