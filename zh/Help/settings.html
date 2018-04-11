@@ -1,159 +1,142 @@
 --- 
 layout: cn 
-title: Settings
+title: 设置
 category: User's Guide 
-next: {url: advanced_features.html, title: Advanced Features}
-previous: {url: gestures.html, title: Gestures }
+next: {url: advanced_features.html, title: 高级功能}
+previous: {url: gestures.html, title: 手势 }
 ---
 <html>
 <body>
-	<h2>Layers</h2>
+	<h2>层</h2>
 	<table>
 		<tbody>
 			<tr>
-				<th scope="col">Property</th>
-				<th scope="col">Description</th>
-				<th scope="col">Value</th>
+				<th scope="col">属性</th>
+				<th scope="col">描述</th>
+				<th scope="col">值</th>
 			</tr>
 			<tr>
-				<td>Focus visibility</td>
-				<td>The alpha value of layer opaque for multiple layers.</td>
-				<td>0~100%, default is 50%
-					<p>If this value is too high, the bottom layer would be covered
-						by the top one.</p>
+				<td>关注可视度</td>
+				<td>多层中透明度的设置</td>
+				<td>取值：0~100%，默认50%
+					<p>如果这个值太大，底下的层可能会被上面的层完全遮盖看不见。</p>
 				</td>
 			</tr>
 			<tr>
-				<td>Show surface</td>
-				<td>Whether or not to display the surface when drawing.</td>
-				<td>Default is true</td>
+				<td>显示底板</td>
+				<td>在绘画过程中是否要显示所使用的底板</td>
+				<td>默认显示</td>
 			</tr>
 		</tbody>
 	</table>
-	<h2>Generals</h2>
+	<h2>通用</h2>
 	<table>
 		<tbody>
 			<tr>
-				<th scope="col">Property</th>
-				<th scope="col">Description</th>
-				<th scope="col">Value</th>
+				<th scope="col">属性</th>
+				<th scope="col">描述</th>
+				<th scope="col">值</th>
 			</tr>
 			<tr>
-				<td>Silence on error</td>
-				<td>Play sound or not when error happens</td>
-				<td>Default is false.</td>
+				<td>静音模式</td>
+				<td>发生错误时播放提示音</td>
+				<td>默认不播放</td>
 			</tr>
 			<tr>
-				<td>Pencil Sensibility</td>
-				<td>The sensibility of Apple Pencil</td>
-				<td>From 1.0 ~ 5.0, and the default value is 3.0.</td>
+				<td>画笔灵敏度</td>
+				<td>Apple Pencil的灵敏度设置</td>
+				<td>取值：1.0 ~ 5.0，默认为3.0</td>
 			</tr>
 			<tr>
-				<td>Enable Auto Save(m)</td>
-				<td>Whether or not to save the artworks automatically. You can
-					also specify a time interval value between 2 save works.</td>
-				<td>Default is true, and the time interval value is from 1
-					minute to 10 minutes, the default value is 2 minutes.</td>
+				<td>自动保存（分钟）</td>
+				<td>是否自动保存绘画，以及自动保存的事件间隔</td>
+				<td>默认自动保存，事件间隔2分钟</td>
 			</tr>
 		</tbody>
 	</table>
-	<h2>Painting Tools</h2>
+	<h2>绘画工具</h2>
 	<table>
 		<tbody>
 			<tr>
-				<th scope="col">Property</th>
-				<th scope="col">Description</th>
-				<th scope="col">Value</th>
+				<th scope="col">属性</th>
+				<th scope="col">描述</th>
+				<th scope="col">值</th>
 			</tr>
 			<tr>
-				<td>Number of Recent Tools</td>
-				<td>The max number of recording recent used painting tools,
-					please see Recent Tools in <a href="toolbar.html">Toolbar</a> for
-					more details.
+				<td>显示最近使用的工具数量</td>
+				<td>显示要记录的最近使用过的工具的数量，在<a href="toolbar.html">工具条</a>上的最近使用工具中使用
 				</td>
-				<td>From 1 ~ 9, and the default value is 8.</td>
+				<td>取值：1到9，默认为8</td>
 			</tr>
 			<tr>
-				<td>Auto Hide Tools Panels(s)</td>
-				<td>Hide painting tool selector(both Recent Tools and Painting
-					Tools) if it not be used within a long time.</td>
-				<td>Default is true, and the tools panels will be hidden after
-					6 ~ 30 seconds.</td>
+				<td>自动隐藏工具面板（秒）</td>
+				<td>工具面板打开后，如果长时间不用，是否要自动隐藏，在<a href="toolbar.html">工具条</a>上的最近使用工具和绘画工具中使用</td>
+				<td>默认是自动隐藏，时间可设为6到30秒。</td>
 			</tr>
 		</tbody>
 	</table>
-	<h2>Painting Toolbar</h2>
+	<h2>工具条</h2>
 	<table border="1">
 		<tbody>
 			<tr>
-				<th scope="col">Property</th>
-				<th scope="col">Description</th>
-				<th scope="col">Value</th>
+				<th scope="col">属性</th>
+				<th scope="col">描述</th>
+				<th scope="col">值</th>
 			</tr>
 			<tr>
-				<td>Hide automatically</td>
-				<td>Enable to hide <a href="toolbar.html">floating painting
-						toolbars</a> while drawing.
-					<p>As you know, the toolbar is very useful for selecting
-						different actions, but at sometimes, we need to hide them to get a
-						clean workspace.</p>
+				<td>绘画时自动隐藏</td>
+				<td>绘画时，是否要隐藏<a href="toolbar.html">浮动工具条</a>以及<a href="palette.html">调色板</a>等无关工具
 				</td>
-				<td>Default is true.</td>
+				<td>默认隐藏</td>
 			</tr>
 			<tr>
-				<td>Delay to Show(s)</td>
-				<td>Whether or not to delay to show the Painting Tool bar.
-					<p>No matter the toolbar is hidden manually or automatically,
-						it will be displayed later. This setting is very important for
-						continuity drawing.</p>
+				<td>延迟显示（秒）</td>
+				<td>绘画结束后是否延迟显示<a href="toolbar.html">浮动工具条</a>以及<a href="palette.html">调色板</a>等相关工具，延迟显示可以增加绘画的连续性
 				</td>
-				<td>Default is false, but you can change the delay time through
-					1 second to 10 seconds.</td>
+				<td>默认是不延迟，可以设置为1-10秒</td>
 			</tr>
 			<tr>
-				<td>Show/Hide Gestures</td>
-				<td>Whether or not to show/hide the toolbar with one finger tap
-					gesture.</td>
-				<td>Default is true</td>
+				<td>显示/隐藏手势</td>
+				<td>是否启用单手指单击的手势去显示和隐藏工具条</td>
+				<td>默认是启用</td>
 			</tr>
 		</tbody>
 	</table>
-	<h2>Gestures</h2>
+	<h2>手势</h2>
 	<table>
 		<tbody>
 			<tr>
-				<th scope="col">Property</th>
-				<th scope="col">Description</th>
-				<th scope="col">Value</th>
+				<th scope="col">属性</th>
+				<th scope="col">描述</th>
+				<th scope="col">值</th>
 			</tr>
 			<tr>
-				<td>Undo</td>
-				<td>Enable one finger swipe left to undo.</td>
-				<td>Default is true.</td>
+				<td>撤销</td>
+				<td>启用<strong>单手指向左滑</strong>撤销的手势</td>
+				<td>默认启用</td>
 			</tr>
 			<tr>
-				<td>Redo</td>
-				<td>Enable one finger swipe right to redo.</td>
-				<td>Default is true</td>
+				<td>重做</td>
+				<td>启用<strong>单手指向右滑</strong>重做的手势</td>
+				<td>默认启用</td>
 			</tr>
 			<tr>
-				<td>Clean</td>
-				<td>Enable one finger swipe up to clean current painting tool.</td>
-				<td>Default is true</td>
+				<td>清除</td>
+				<td>启用<strong>单手指向上滑</strong>清洁当前工具的手势</td>
+				<td>默认启用</td>
 			</tr>
 			<tr>
-				<td>Pattern picker</td>
-				<td>Enable one finger swipe down to switch to pattern picker.</td>
-				<td>Default is true</td>
+				<td>模式选择</td>
+				<td>启用<strong>单手指向下滑</strong>进入画笔模式选择的手势</td>
+				<td>默认启用</td>
 			</tr>
 			<tr>
-				<td>AutoReset</td>
-				<td>Enable two fingers single touch to enable/disable auto
-					reset of painting tool.</td>
-				<td>Default is true</td>
+				<td>自动重置</td>
+				<td>启用<strong>双手指向单击</strong>切换自动重置的手势</td>
+				<td>默认启用</td>
 			</tr>
 		</tbody>
 	</table>
-	<p>More details about gestures, please see this link..</p>
+	<p>更多手势详情，请参考<a href="gestures.html">链接</a>。</p>
 </body>
 </html>
