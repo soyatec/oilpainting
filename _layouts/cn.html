@@ -1,53 +1,52 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="{{ site.lang | default: "zh-CN" }}">
 <head>
 <meta charset="UTF-8">
-<title>画坊-油画</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/normalize.css" media="screen">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen">
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/github-light.css" media="screen">
-<link rel='icon' href='{{ site.baseurl }}/images/impasto.ico' type=‘image/x-ico’ /> 
+<meta name="theme-color" content="#157878">
+<link rel="stylesheet"
+	href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+<link rel='icon' href='{{ site.baseurl }}/images/impasto.ico'
+	type=‘image/x-ico’ />
+<title>画坊-油画</title>
 </head>
 <body>
 	<section class="page-header">
-	    <h1 class="project-name">画坊-油画</h1>
+		<h1 class="project-name">画坊-油画</h1>
 		<h2 class="project-tagline">一款移动设备端的3D油画工具</h2>
-		<a href="https://soyatec.github.io/oilpainting/fr" target="_blank" class="btn">French</a>
-		<a href="https://soyatec.github.io/oilpainting/" target="_blank" class="btn">English</a>
+		<a href="https://soyatec.github.io/oilpainting/fr" target="_blank"
+			class="btn">French</a> <a
+			href="https://soyatec.github.io/oilpainting/" target="_blank"
+			class="btn">English</a>
 	</section>
 	<section class="main-content">
 		<h1>{{page.title}}</h1>
 		{{content}}
-		
+
 		<hr>
 		<ul>
 			<li>返回
 				<p>
 					<a href="https://soyatec.github.io/oilpainting/zh">首页</a>
 				</p>
-			</li> 
-			{% if page.previous != nil%}
+			</li> {% if page.previous != nil%}
 			<li>上一页
 				<p>
 					<a href="{{page.previous.url}}">{{page.previous.title}}</a>
 				</p>
-			</li> 
-			{% endif %}
-			{% if page.next != nil %}
+			</li> {% endif %} {% if page.next != nil %}
 			<li>下一页
 				<p>
 					<a href="{{page.next.url}}">{{page.next.title}}</a>
 				</p>
-			</li> 
-			{% endif%}
+			</li> {% endif%}
 		</ul>
 		<hr>
 		{% include disqus.html %}
 		<footer class="site-footer">
 			<div align="center">
-			<span class="site-footer-credits">画坊-油画 @<a href="http://www.soyatec.com">松亚科技</a></span>
+				<span class="site-footer-credits">画坊-油画 @<a
+					href="http://www.soyatec.com">松亚科技</a></span>
 			</div>
 		</footer>
 	</section>
